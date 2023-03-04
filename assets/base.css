@@ -2245,6 +2245,9 @@ input[type='checkbox'] {
   background-color: rgb(var(--color-background));
   z-index: 1;
 }
+.header-wrapper.color-background-1.gradient {
+  background: black !important;
+}
 
 nav.header__inline-menu {
   width: 79%;
@@ -3016,9 +3019,7 @@ tagname or .classname or #id{
 .header__menu-item .header__active-menu-item {
 text-decoration: none;
 }
-.header__menu-item {
-margin: 0px 80px 0px 80px;
-}
+
 
 
 .product-grid .card:not(.ratio), .product-grid .card-information {
