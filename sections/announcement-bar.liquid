@@ -122,7 +122,13 @@
       overflow: hidden;
       height: 40px;
   }
-  
+  {% if request.page_type  == "home" %}
+    .header-wrapper {
+
+      position: absolute;
+      }
+
+{% endif %}
   @-moz-keyframes scroll-left {
     0% {
       
