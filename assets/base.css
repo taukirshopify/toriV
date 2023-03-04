@@ -2240,9 +2240,22 @@ input[type='checkbox'] {
 /* Main Header Layout */
 .header-wrapper {
   display: block;
-  position: relative;
+  position: absolute;
+  width: 100%;
   background-color: rgb(var(--color-background));
   z-index: 1;
+}
+
+nav.header__inline-menu {
+  width: 79%;
+}
+.list-menu--inline {
+  display: inline-flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: space-between;
+  padding: 0 !important;
+  margin: 0 !important;
 }
 
 .header-wrapper--border-bottom {
