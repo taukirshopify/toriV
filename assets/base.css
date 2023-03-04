@@ -2246,7 +2246,7 @@ input[type='checkbox'] {
   z-index: 1;
 }
 .header-wrapper.color-background-1.gradient {
-  background: black !important;
+  background: transparent !important;
 }
 
 nav.header__inline-menu {
