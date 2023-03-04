@@ -1,0 +1,195 @@
+{{ 'section-main-product.css' | asset_url | stylesheet_tag }}
+{{ 'section-featured-product.css' | asset_url | stylesheet_tag }}
+{{ 'component-accordion.css' | asset_url | stylesheet_tag }}
+{{ 'component-price.css' | asset_url | stylesheet_tag }}
+{{ 'component-rte.css' | asset_url | stylesheet_tag }}
+{{ 'component-loading-overlay.css' | asset_url | stylesheet_tag }}
+
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.0 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.0 | round: 0 }}px;
+  }
+
+  .custome-width{
+    width:50%;
+  }
+   .custome-width img {
+    width: 50%;
+}
+
+   .custome-width {
+     color:#fff;
+}
+
+
+    .custome-width h2.product__title {
+    color: #fff;
+}
+.padding-amazon{
+
+  padding:20px 0;
+}
+ .custome-width a.btn {
+    padding: 00px 0px;
+    background: pink;
+    color: #fff;
+    width: 75%;
+    display: block;
+    text-align: center;
+}
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+
+
+  }
+  
+  @media screen and (max-width: 750px) {
+      .custome-width{
+      width:100%;
+    }
+  }
+{%- endstyle -%}
+
+<link rel="stylesheet" href="{{ 'component-deferred-media.css' | asset_url }}" media="print" onload="this.media='all'">
+
+{%- assign product = section.settings.product -%}
+
+{%- assign first_3d_model = product.media | where: "media_type", "model" | first -%}
+{%- if first_3d_model -%}
+  {{ 'component-product-model.css' | asset_url | stylesheet_tag }}
+  <link
+    id="ModelViewerStyle"
+    rel="stylesheet"
+    href="https://cdn.shopify.com/shopifycloud/model-viewer-ui/assets/v1.0/model-viewer-ui.css"
+    media="print"
+    onload="this.media='all'"
+  >
+  <link
+    id="ModelViewerOverride"
+    rel="stylesheet"
+    href="{{ 'component-model-viewer-ui.css' | asset_url }}"
+    media="print"
+    onload="this.media='all'"
+  >
+{%- endif -%}
+
+<section class="color-{{ section.settings.color_scheme }} padding-amazon {% if section.settings.secondary_background %}background-secondary{% else %}gradient{% endif %}">
+  <div class="page-width section-{{ section.id }}-padding{% if section.settings.secondary_background %} isolate{% endif %}">
+    <div class="featured-product product grid grid--1-col gradient">
+      <div class=" custome-width product__media-wrapper{% if section.settings.media_position == 'right' %} medium-hide large-up-hide{% endif %}">
+           <img src="{{section.settings.img | img_url:''}}
+           
+             
+             
+             
+             " alt="">
+      </div>
+      <div class="product__info-wrapper  custome-width" >
+        <div id="ProductInfo-{{ section.id }}" class="product__info-container">
+          
+
+         
+                <h2 class="product__title " >
+                  {%- if section.settings.title != blank -%}
+                    {{ section.settings.title | escape }}
+                 
+                  {%- endif -%}
+                </h2>
+
+<p>{{ section.settings.price }}</p>
+          <div>
+            {{ section.settings.desc }}
+          </div>
+          
+        
+           
+<a href="{{section.settings.link}}" target="_blank" class="btn">{{ section.settings.btn }}</a>
+            
+
+             
+         
+      
+           
+           
+
+        </div>
+      </div>
+
+    </div>
+     
+                          
+                          
+                          </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+{% schema %}
+{
+  "name": "Amazon Featured product",
+  "tag": "section",
+  "class": "section section-featured-product",
+  "settings": [
+
+{
+  "type": "image_picker",
+  "id": "img",
+  "label": "Select your Product Image"
+},
+    {
+  "type": "text",
+  "id": "title",
+  "label": "Product title",
+  "default": "Tori V's ABC's Paperback – Large Print, November 23, 2022",
+  "placeholder": "Tori V's ABC's Paperback – Large Print, November 23, 2022"
+},
+    {
+  "type": "textarea",
+  "id": "desc",
+  "label": "Product description",
+  "default": "In this alphabet book, follow along with Tori V as she explores her favorite interests and hobbies. From fashion to science, learn the possibilities one can be! Welcome to Tori V’s Universe!",
+
+  "placeholder": "In this alphabet book ...."
+}
+    ,{
+  "type": "text",
+  "id": "price",
+  "label": "Select your price",
+  "default": "10 USD",
+
+  "placeholder": "10 USD"
+},
+    {
+  "type": "text",
+  "id": "btn",
+  "label": "Button title",
+  "default": "Shop Now",
+
+  "placeholder": "Shop Now"
+},
+    {
+  "type": "url",
+  "id": "link",
+  "label": "Amazon link"
+
+}
+
+  ],
+  "presets": [
+    {
+      "name": "Amazon Featured product"
+    }
+  ]
+}
+{% endschema %}
