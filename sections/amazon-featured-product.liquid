@@ -81,16 +81,11 @@
   <div class="page-width section-{{ section.id }}-padding{% if section.settings.secondary_background %} isolate{% endif %}">
     <div class="featured-product product grid grid--1-col gradient">
       <div class=" custome-width product__media-wrapper{% if section.settings.media_position == 'right' %} medium-hide large-up-hide{% endif %}">
-           <img src="{{section.settings.img | img_url:''}}
-           
-             
-             
-             
-             " alt="">
+           <img src="{{section.settings.img | img_url:''}}" alt="" class="d-none">
       </div>
       <div class="product__info-wrapper  custome-width" >
         <div id="ProductInfo-{{ section.id }}" class="product__info-container">
-          
+          <img src="{{section.settings.img | img_url:''}}" alt="">
 
          
                 <h2 class="product__title " >
@@ -193,3 +188,10 @@
   ]
 }
 {% endschema %}
+
+
+<style>
+.d-none{
+  display:none;
+}
+</style>
