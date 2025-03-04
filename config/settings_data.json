@@ -134,6 +134,20 @@
     "sections": {
       "announcement-bar": {
         "type": "announcement-bar",
+        "blocks": {
+          "announcement_TtAf3L": {
+            "type": "announcement",
+            "settings": {
+              "text": "Welcome to the official store for Tori V!",
+              "text_alignment": "center",
+              "color_scheme": "accent-1",
+              "link": ""
+            }
+          }
+        },
+        "block_order": [
+          "announcement_TtAf3L"
+        ],
         "settings": {}
       },
       "header": {
