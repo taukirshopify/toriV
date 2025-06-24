@@ -10,13 +10,13 @@
 {
   "current": {
     "colors_solid_button_labels": "#ffffff",
-    "colors_accent_1": "#000000",
+    "colors_accent_1": "#ffffff",
     "gradient_accent_1": "",
-    "colors_accent_2": "#000000",
+    "colors_accent_2": "#ffffff",
     "gradient_accent_2": "",
     "colors_text": "#ff70cb",
     "colors_outline_button_labels": "#ffffff",
-    "colors_background_1": "#000000",
+    "colors_background_1": "#ffffff",
     "gradient_background_1": "",
     "colors_background_2": "#000000",
     "gradient_background_2": "",

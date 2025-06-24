@@ -24,7 +24,6 @@
         "products_per_page": 16,
         "columns_desktop": 4,
         "image_ratio": "adapt",
-        "bg": "shopify://shop_images/Tori_V_GIF-downsized_large_1.gif",
         "show_secondary_image": true,
         "show_vendor": false,
         "show_rating": false,
