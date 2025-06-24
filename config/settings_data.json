@@ -173,7 +173,7 @@
           "link_list_WgBPrq": {
             "type": "link_list",
             "settings": {
-              "heading": "Quick links",
+              "heading": "Footer",
               "menu": "footer"
             }
           }
