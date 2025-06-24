@@ -170,7 +170,7 @@
       "footer": {
         "type": "footer",
         "blocks": {
-          "footer-0": {
+          "link_list_i44kEQ": {
             "type": "link_list",
             "settings": {
               "heading": "Quick links",
@@ -179,7 +179,7 @@
           }
         },
         "block_order": [
-          "footer-0"
+          "link_list_i44kEQ"
         ],
         "settings": {
           "color_scheme": "accent-1",

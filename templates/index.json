@@ -210,19 +210,12 @@
     "2e1fa2cf-a787-45b5-96d1-f67290d1b7d2": {
       "type": "newsletter",
       "blocks": {
-        "template--17590340223254__2e1fa2cf-a787-45b5-96d1-f67290d1b7d2-1673893359d8684007-1": {
-          "type": "paragraph",
-          "settings": {
-            "text": "<p>Be the first to know about new collections and exclusive offers.</p>"
-          }
-        },
         "template--17590340223254__2e1fa2cf-a787-45b5-96d1-f67290d1b7d2-1673893359d8684007-2": {
           "type": "email_form",
           "settings": {}
         }
       },
       "block_order": [
-        "template--17590340223254__2e1fa2cf-a787-45b5-96d1-f67290d1b7d2-1673893359d8684007-1",
         "template--17590340223254__2e1fa2cf-a787-45b5-96d1-f67290d1b7d2-1673893359d8684007-2"
       ],
       "settings": {
