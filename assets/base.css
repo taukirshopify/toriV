@@ -3026,3 +3026,13 @@ text-decoration: none;
     background: transparent !important;
 }
 
+
+
+/* FORCE mauve background on collection / product grid */
+.template-collection,
+.collection,
+.collection__products,
+.product-grid,
+#MainContent {
+  background-color: #B2819C !important;
+}
