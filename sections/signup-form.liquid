@@ -293,9 +293,8 @@
 </script>
 
 <script>
-  // MailerLite Configuration
-  const MAILERLITE_API_KEY = 'YOUR_MAILERLITE_API_KEY_HERE';
-  const MAILERLITE_GROUP_ID = 'YOUR_GROUP_ID_HERE';
+  // Your Cloudflare Worker URL
+  const WORKER_URL = 'https://mailerlite-signup.YOUR-SUBDOMAIN.workers.dev';
   
   async function initAutocomplete() {
     await google.maps.importLibrary("places");
@@ -337,7 +336,7 @@
       }
     });
     
-    // Form submission to MailerLite
+    // Form submission via Cloudflare Worker
     document.getElementById('vip-signup-form').addEventListener('submit', async function(e) {
       e.preventDefault();
       
@@ -345,34 +344,35 @@
       submitButton.disabled = true;
       submitButton.textContent = 'Signing up...';
       
+      // Hide any previous error messages
+      document.getElementById('error-msg').style.display = 'none';
+      
       const formData = {
         email: document.getElementById('email').value,
-        fields: {
-          name: document.getElementById('first-name').value,
-          last_name: document.getElementById('last-name').value,
-          tiktok: document.getElementById('tiktok').value,
-          phone: document.getElementById('country-code').value + ' ' + document.getElementById('phone').value,
-          address: document.getElementById('street-address').value,
-          apartment: document.getElementById('apartment').value,
-          city: document.getElementById('city').value,
-          state: document.getElementById('state').value,
-          country: document.getElementById('country').value,
-          zip: document.getElementById('zip').value
-        },
-        groups: [MAILERLITE_GROUP_ID]
+        first_name: document.getElementById('first-name').value,
+        last_name: document.getElementById('last-name').value,
+        tiktok: document.getElementById('tiktok').value,
+        phone: document.getElementById('country-code').value + ' ' + document.getElementById('phone').value,
+        address: document.getElementById('street-address').value,
+        apartment: document.getElementById('apartment').value,
+        city: document.getElementById('city').value,
+        state: document.getElementById('state').value,
+        country: document.getElementById('country').value,
+        zip: document.getElementById('zip').value
       };
       
       try {
-        const response = await fetch('https://connect.mailerlite.com/api/subscribers', {
+        const response = await fetch(WORKER_URL, {
           method: 'POST',
           headers: {
-            'Content-Type': 'application/json',
-            'Authorization': 'Bearer ' + MAILERLITE_API_KEY
+            'Content-Type': 'application/json'
           },
           body: JSON.stringify(formData)
         });
         
-        if (response.ok) {
+        const result = await response.json();
+        
+        if (result.success) {
           document.getElementById('vip-signup-form').style.display = 'none';
           document.getElementById('success-msg').style.display = 'block';
         } else {
