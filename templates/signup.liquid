@@ -267,11 +267,11 @@
   
   {% section 'footer' %}
   
-  <!-- Google Places API - REPLACE WITH YOUR NEW API KEY -->
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDjFDwjpwT-QdkEUHdCzeQsHEbsVDn2sLU&libraries=places"></script>
-  
+  <!-- Google Places API -->
+  <script defer src="https://maps.googleapis.com/maps/api/js?key=YOUR_NEW_API_KEY_HERE&libraries=places&callback=initAutocomplete"></script>
+
   <script>
-    document.addEventListener('DOMContentLoaded', function() {
+    function initAutocomplete() {
       // Address Autocomplete
       const streetInput = document.getElementById('street-address');
       
@@ -359,7 +359,7 @@
           document.getElementById('success-msg').style.display = 'block';
         });
       });
-    });
+    }
   </script>
 </body>
 </html>
