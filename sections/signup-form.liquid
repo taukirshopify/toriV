@@ -33,8 +33,7 @@
       </div>
       
       <label for="street-address">Street Address</label>
-      <div id="autocomplete-container"></div>
-      <input type="hidden" id="street-address" name="street_address">
+      <input type="text" id="street-address" name="street_address" autocomplete="off">
       
       <label for="apartment">Apartment, suite, etc.</label>
       <input type="text" id="apartment" name="apartment">
@@ -221,31 +220,35 @@
     margin-top: 30px;
   }
   
-  /* Style the new Google PlaceAutocompleteElement */
-  #autocomplete-container {
-    margin-bottom: 24px;
-  }
-  
-  gmp-place-autocomplete {
-    width: 100%;
-  }
-  
-  gmp-place-autocomplete::part(input) {
-    width: 100%;
-    padding: 14px 16px;
-    border: 1px solid #e0e0e0;
+  /* Google autocomplete dropdown styling */
+  .pac-container {
     border-radius: 6px;
-    font-size: 16px;
-    box-sizing: border-box;
-    background: #fafafa;
-    color: #333;
+    border: 1px solid #e0e0e0;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     font-family: inherit;
+    margin-top: 4px;
   }
   
-  gmp-place-autocomplete::part(input):focus {
-    outline: none;
-    border-color: #ff69b4;
-    background: #fff;
+  .pac-item {
+    padding: 12px 16px;
+    cursor: pointer;
+    font-size: 14px;
+  }
+  
+  .pac-item:hover {
+    background: #fff0f5;
+  }
+  
+  .pac-item-selected {
+    background: #fff0f5;
+  }
+  
+  .pac-icon {
+    display: none;
+  }
+  
+  .pac-item-query {
+    font-size: 14px;
   }
   
   @media (max-width: 600px) {
@@ -262,7 +265,7 @@
 
 <script>
   (g=>{var h,a,k,p="The Google Maps JavaScript API",c="google",l="importLibrary",q="__ib__",m=document,b=window;b=b[c]||(b[c]={});var d=b.maps||(b.maps={}),r=new Set,e=new URLSearchParams,u=()=>h||(h=new Promise(async(f,n)=>{await (a=m.createElement("script"));e.set("libraries",[...r]);for(k in g)e.set(k.replace(/[A-Z]/g,t=>"_"+t[0].toLowerCase()),g[k]);e.set("callback",c+".maps."+q);a.src=`https://maps.${c}apis.com/maps/api/js?`+e;d[q]=f;a.onerror=()=>h=n(Error(p+" could not load."));a.nonce=m.querySelector("script[nonce]")?.nonce||"";m.head.append(a)}));d[l]?console.warn(p+" only loads once. Ignoring:",g):d[l]=(f,...n)=>r.add(f)&&u().then(()=>d[l](f,...n))})({
-    key: "AIzaSyDjFDwjpwT-QdkEUHdCzeQsHEbsVDn2sLU",
+    key: "YOUR_API_KEY_HERE",
     v: "weekly"
   });
 </script>
@@ -271,31 +274,29 @@
   async function initAutocomplete() {
     await google.maps.importLibrary("places");
     
-    const placeAutocomplete = new google.maps.places.PlaceAutocompleteElement({
+    const streetInput = document.getElementById('street-address');
+    
+    const autocomplete = new google.maps.places.Autocomplete(streetInput, {
       types: ['address']
     });
     
-    document.getElementById('autocomplete-container').appendChild(placeAutocomplete);
-    
-    placeAutocomplete.addEventListener('gmp-placeselect', async ({ place }) => {
-      await place.fetchFields({ fields: ['addressComponents', 'formattedAddress'] });
+    autocomplete.addListener('place_changed', function() {
+      const place = autocomplete.getPlace();
       
-      const addressComponents = place.addressComponents;
-      
-      if (addressComponents) {
+      if (place.address_components) {
         let streetNumber = '';
         let route = '';
         
-        addressComponents.forEach(function(component) {
+        place.address_components.forEach(function(component) {
           const type = component.types[0];
           
-          if (type === 'street_number') streetNumber = component.longText;
-          if (type === 'route') route = component.longText;
-          if (type === 'locality') document.getElementById('city').value = component.longText;
-          if (type === 'postal_code') document.getElementById('zip').value = component.longText;
+          if (type === 'street_number') streetNumber = component.long_name;
+          if (type === 'route') route = component.long_name;
+          if (type === 'locality') document.getElementById('city').value = component.long_name;
+          if (type === 'postal_code') document.getElementById('zip').value = component.long_name;
           if (type === 'country') {
             const countrySelect = document.getElementById('country');
-            const countryName = component.longText;
+            const countryName = component.long_name;
             for (let i = 0; i < countrySelect.options.length; i++) {
               if (countrySelect.options[i].value === countryName) {
                 countrySelect.selectedIndex = i;
@@ -305,7 +306,7 @@
           }
         });
         
-        document.getElementById('street-address').value = (streetNumber + ' ' + route).trim();
+        streetInput.value = (streetNumber + ' ' + route).trim();
       }
     });
     
