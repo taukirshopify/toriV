@@ -33,7 +33,8 @@
       </div>
       
       <label for="street-address">Street Address</label>
-      <input type="text" id="street-address" name="street_address" autocomplete="off">
+      <div id="autocomplete-container"></div>
+      <input type="hidden" id="street-address" name="street_address">
       
       <label for="apartment">Apartment, suite, etc.</label>
       <input type="text" id="apartment" name="apartment">
@@ -220,24 +221,31 @@
     margin-top: 30px;
   }
   
-  .pac-container {
-    border-radius: 6px;
+  /* Style the new Google PlaceAutocompleteElement */
+  #autocomplete-container {
+    margin-bottom: 24px;
+  }
+  
+  gmp-place-autocomplete {
+    width: 100%;
+  }
+  
+  gmp-place-autocomplete::part(input) {
+    width: 100%;
+    padding: 14px 16px;
     border: 1px solid #e0e0e0;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    border-radius: 6px;
+    font-size: 16px;
+    box-sizing: border-box;
+    background: #fafafa;
+    color: #333;
     font-family: inherit;
   }
   
-  .pac-item {
-    padding: 10px 14px;
-    cursor: pointer;
-  }
-  
-  .pac-item:hover {
-    background: #fff0f5;
-  }
-  
-  .pac-item-selected {
-    background: #fff0f5;
+  gmp-place-autocomplete::part(input):focus {
+    outline: none;
+    border-color: #ff69b4;
+    background: #fff;
   }
   
   @media (max-width: 600px) {
@@ -252,33 +260,42 @@
   }
 </style>
 
-<script defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDjFDwjpwT-QdkEUHdCzeQsHEbsVDn2sLU&libraries=places&callback=initAutocomplete"></script>
+<script>
+  (g=>{var h,a,k,p="The Google Maps JavaScript API",c="google",l="importLibrary",q="__ib__",m=document,b=window;b=b[c]||(b[c]={});var d=b.maps||(b.maps={}),r=new Set,e=new URLSearchParams,u=()=>h||(h=new Promise(async(f,n)=>{await (a=m.createElement("script"));e.set("libraries",[...r]);for(k in g)e.set(k.replace(/[A-Z]/g,t=>"_"+t[0].toLowerCase()),g[k]);e.set("callback",c+".maps."+q);a.src=`https://maps.${c}apis.com/maps/api/js?`+e;d[q]=f;a.onerror=()=>h=n(Error(p+" could not load."));a.nonce=m.querySelector("script[nonce]")?.nonce||"";m.head.append(a)}));d[l]?console.warn(p+" only loads once. Ignoring:",g):d[l]=(f,...n)=>r.add(f)&&u().then(()=>d[l](f,...n))})({
+    key: "AIzaSyDjFDwjpwT-QdkEUHdCzeQsHEbsVDn2sLU",
+    v: "weekly"
+  });
+</script>
 
 <script>
-  function initAutocomplete() {
-    const streetInput = document.getElementById('street-address');
+  async function initAutocomplete() {
+    await google.maps.importLibrary("places");
     
-    const autocomplete = new google.maps.places.Autocomplete(streetInput, {
+    const placeAutocomplete = new google.maps.places.PlaceAutocompleteElement({
       types: ['address']
     });
     
-    autocomplete.addListener('place_changed', function() {
-      const place = autocomplete.getPlace();
+    document.getElementById('autocomplete-container').appendChild(placeAutocomplete);
+    
+    placeAutocomplete.addEventListener('gmp-placeselect', async ({ place }) => {
+      await place.fetchFields({ fields: ['addressComponents', 'formattedAddress'] });
       
-      if (place.address_components) {
+      const addressComponents = place.addressComponents;
+      
+      if (addressComponents) {
         let streetNumber = '';
         let route = '';
         
-        place.address_components.forEach(function(component) {
+        addressComponents.forEach(function(component) {
           const type = component.types[0];
           
-          if (type === 'street_number') streetNumber = component.long_name;
-          if (type === 'route') route = component.long_name;
-          if (type === 'locality') document.getElementById('city').value = component.long_name;
-          if (type === 'postal_code') document.getElementById('zip').value = component.long_name;
+          if (type === 'street_number') streetNumber = component.longText;
+          if (type === 'route') route = component.longText;
+          if (type === 'locality') document.getElementById('city').value = component.longText;
+          if (type === 'postal_code') document.getElementById('zip').value = component.longText;
           if (type === 'country') {
             const countrySelect = document.getElementById('country');
-            const countryName = component.long_name;
+            const countryName = component.longText;
             for (let i = 0; i < countrySelect.options.length; i++) {
               if (countrySelect.options[i].value === countryName) {
                 countrySelect.selectedIndex = i;
@@ -288,10 +305,11 @@
           }
         });
         
-        streetInput.value = streetNumber + ' ' + route;
+        document.getElementById('street-address').value = (streetNumber + ' ' + route).trim();
       }
     });
     
+    // Form submission
     document.getElementById('vip-signup-form').addEventListener('submit', function(e) {
       e.preventDefault();
       
@@ -336,6 +354,8 @@
       });
     });
   }
+  
+  initAutocomplete();
 </script>
 
 {% schema %}
