@@ -10,7 +10,7 @@
 {
   "current": {
     "colors_solid_button_labels": "#ffffff",
-    "colors_accent_1": "#ffffff",
+    "colors_accent_1": "#000000",
     "gradient_accent_1": "",
     "colors_accent_2": "#ffffff",
     "gradient_accent_2": "",
@@ -138,16 +138,7 @@
           "announcement_nJFJxw": {
             "type": "announcement",
             "settings": {
-              "text": "TORI V LIVE — JULY 11 — DALLAS, TEXAS. <a href=\"https://www.eventim.us/event/tickets/689632\">GET TICKETS NOW</a>",
-              "text_alignment": "center",
-              "color_scheme": "accent-1",
-              "link": ""
-            }
-          },
-          "announcement_TtAf3L": {
-            "type": "announcement",
-            "settings": {
-              "text": "Welcome to the official store for Tori V!",
+              "text": "TORI V: LIVE  JULY 11  DALLAS, TEXAS. GET TICKETS NOW",
               "text_alignment": "center",
               "color_scheme": "accent-1",
               "link": ""
@@ -155,8 +146,7 @@
           }
         },
         "block_order": [
-          "announcement_nJFJxw",
-          "announcement_TtAf3L"
+          "announcement_nJFJxw"
         ],
         "settings": {}
       },
