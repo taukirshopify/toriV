@@ -135,6 +135,15 @@
       "announcement-bar": {
         "type": "announcement-bar",
         "blocks": {
+          "announcement_nJFJxw": {
+            "type": "announcement",
+            "settings": {
+              "text": "TORI V LIVE — JULY 11 — DALLAS, TEXAS. <a href=\"https://www.eventim.us/event/tickets/689632\">GET TICKETS NOW</a>",
+              "text_alignment": "center",
+              "color_scheme": "accent-1",
+              "link": ""
+            }
+          },
           "announcement_TtAf3L": {
             "type": "announcement",
             "settings": {
@@ -146,6 +155,7 @@
           }
         },
         "block_order": [
+          "announcement_nJFJxw",
           "announcement_TtAf3L"
         ],
         "settings": {}
