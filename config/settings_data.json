@@ -10,15 +10,15 @@
 {
   "current": {
     "colors_solid_button_labels": "#ffffff",
-    "colors_accent_1": "#b2819c",
+    "colors_accent_1": "#ffffff",
     "gradient_accent_1": "",
-    "colors_accent_2": "#b2819c",
+    "colors_accent_2": "#ffffff",
     "gradient_accent_2": "",
     "colors_text": "#000000",
     "colors_outline_button_labels": "#ffffff",
-    "colors_background_1": "#b2819c",
+    "colors_background_1": "#ffffff",
     "gradient_background_1": "",
-    "colors_background_2": "#b2819c",
+    "colors_background_2": "#ffffff",
     "gradient_background_2": "",
     "type_header_font": "archivo_n4",
     "heading_scale": 110,
@@ -221,18 +221,6 @@
           "button_horizontal_position": "bottom_right",
           "button_vertical_position": "lowest",
           "greeting_message": "👋 Hi, message us with any questions. We're happy to help!"
-        }
-      },
-      "9776720720251544092": {
-        "type": "shopify://apps/helium-customer-fields/blocks/app-embed/bab58598-3e6a-4377-aaaa-97189b15f131",
-        "disabled": false,
-        "settings": {
-          "registration_form_id": "",
-          "edit_account_form_id": "",
-          "edit_account_link_text": "Edit account",
-          "edit_account_heading": "Edit account",
-          "edit_account_back_link_text": "Back to account",
-          "enable_js_api": false
         }
       }
     }

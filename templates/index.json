@@ -9,15 +9,6 @@
  */
 {
   "sections": {
-    "fa2d7245-2469-4622-b8ba-a1ffd6e42116": {
-      "type": "custom-liquid",
-      "settings": {
-        "custom_liquid": "<video autoplay=\"autoplay\" loop=\"loop\" muted defaultMuted playsinline  oncontextmenu=\"return false;\"  preload=\"auto\" id=\"openthinkingvideo\" controls><source src=\"https://cdn.shopify.com/videos/c/o/v/98ef1cd3912742fc8d123cfc169cb821.mp4\" type=\"video/mp4\"></video><style>#openthinkingvideo { display:block; max-width: 100%; width: 100%; padding: 0; margin: 0 }</style>",
-        "color_scheme": "background-1",
-        "padding_top": 0,
-        "padding_bottom": 0
-      }
-    },
     "86ef680f-5242-445f-b47e-6fad6f327692": {
       "type": "slideshow",
       "blocks": {
@@ -227,7 +218,6 @@
     }
   },
   "order": [
-    "fa2d7245-2469-4622-b8ba-a1ffd6e42116",
     "86ef680f-5242-445f-b47e-6fad6f327692",
     "64c75373-01b9-41ea-975e-581740d70451",
     "c0185348-cad4-42f3-bb37-3813f28cbe7e",
