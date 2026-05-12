@@ -3058,9 +3058,6 @@ text-decoration: none;
   content: " GET TICKETS NOW";
   text-decoration: underline;
 }
-.announcement-bar:hover .marquee,
-.announcement-bar:hover .announcement-bar-slider,
-.announcement-bar:hover .slideshow__text,
-.announcement-bar:hover .scrolling-text {
+.announcement-bar__message:hover {
   animation-play-state: paused !important;
 }
