@@ -3072,3 +3072,6 @@ text-decoration: none;
 .announcement-bar:hover {
   background: inherit !important;
 }
+.announcement-bar__message {
+  animation-duration: 40s !important;
+}
