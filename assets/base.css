@@ -3079,3 +3079,11 @@ text-decoration: none;
   animation: scroll-left 55s linear infinite !important;
   animation-delay: -20s !important;
 }
+.header__inline-menu {
+  margin: 0 auto !important;
+  justify-content: center !important;
+}
+
+.header__icons {
+  margin-left: 0 !important;
+}
