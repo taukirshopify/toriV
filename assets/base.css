@@ -2175,9 +2175,10 @@ input[type='checkbox'] {
   line-height: calc(1 + 0.1 / var(--font-body-scale));
 }
 
-/* section-announcement-bar */
-#shopify-section-announcement-bar {
-  z-index: 5;
+.announcement-bar a {
+  color: inherit !important;
+  text-decoration: underline !important;
+}
 }
 
 .announcement-bar {
