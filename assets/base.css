@@ -3044,3 +3044,17 @@ text-decoration: none;
   letter-spacing: 1.5px !important;
   text-transform: uppercase !important;
 }
+
+.announcement-bar a,
+.announcement-bar__message {
+  text-decoration: none !important;
+}
+
+.announcement-bar__message {
+  color: white !important;
+}
+
+.announcement-bar__message::after {
+  content: " GET TICKETS NOW";
+  text-decoration: underline;
+}
