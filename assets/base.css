@@ -3051,7 +3051,7 @@ text-decoration: none;
 }
 
 .announcement-bar__message {
-  color: white !important;
+  color: black !important;
 }
 
 .announcement-bar__message::after {
