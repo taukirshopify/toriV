@@ -75,12 +75,7 @@
         "3a480d71-9b96-47f2-9783-fef4b75a618c",
         "3c836511-e3a6-4812-8fef-52cc0b1297fb"
       ],
-      "custom_css": [
-        ".header-wrapper {position: relative !important; background: #ffffff !important; z-index: 10;}",
-        ".header {background: #ffffff !important; border-bottom: 1px solid #000000;}",
-        ".header__menu-item,.header__menu-item span,.header__icon,.header__heading-link {color: #000000 !important; font-family: Arial, Helvetica, sans-serif !important; font-size: 10px !important; letter-spacing: 1px !important; text-transform: uppercase !important;}",
-        ".header__heading-logo {max-width: 160px !important;}"
-      ],
+      "custom_css": [],
       "settings": {
         "layout": "full_bleed",
         "slide_height": "adapt_image",
