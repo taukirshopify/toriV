@@ -3073,9 +3073,9 @@ text-decoration: none;
   background: inherit !important;
 }
 .announcement-bar__message {
-  animation-duration: 48s !important;
+  animation-duration: 55s !important;
 }
 .announcement-bar__message {
-  animation: scroll-left 48s linear infinite !important;
+  animation: scroll-left 55s linear infinite !important;
   animation-delay: -20s !important;
 }
