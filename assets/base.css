@@ -3075,3 +3075,6 @@ text-decoration: none;
 .announcement-bar__message {
   animation-duration: 48s !important;
 }
+.announcement-bar__message {
+  padding-left: 100vw !important;
+}
