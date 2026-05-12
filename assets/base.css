@@ -3061,3 +3061,14 @@ text-decoration: none;
 .announcement-bar__message:hover {
   animation-play-state: paused !important;
 }
+.announcement-bar__link:hover,
+.announcement-bar__link:focus,
+.announcement-bar__link:active {
+  background: transparent !important;
+  opacity: 1 !important;
+  box-shadow: none !important;
+}
+
+.announcement-bar:hover {
+  background: inherit !important;
+}
