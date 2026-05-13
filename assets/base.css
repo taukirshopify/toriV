@@ -3450,4 +3450,7 @@ text-decoration: none;
 .product-count-vertical,
 .facets__count {
   display: none !important;
+}.mobile-facets__close {
+  position: absolute;
+  right: 24px;
 }
