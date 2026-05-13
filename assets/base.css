@@ -3275,4 +3275,7 @@ text-decoration: none;
 }
 
 
+}.header__icon .icon-cart {
+  width: 4rem !important;
+  height: 4rem !important;
 }
