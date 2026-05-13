@@ -3294,3 +3294,14 @@ text-decoration: none;
   <circle cx="17" cy="18" r="1"/>
 
 </svg>
+.header__icon--cart {
+  width: 44px !important;
+  height: 44px !important;
+}
+
+.header__icon--cart svg {
+  width: 30px !important;
+  height: 30px !important;
+  min-width: 30px !important;
+  min-height: 30px !important;
+}
