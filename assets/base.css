@@ -3300,11 +3300,11 @@ text-decoration: none;
 }
 
 .header__icon--cart svg {
-  width: 38px !important;
-  height: 38px !important;
-  min-width: 38px !important;
-  min-height: 38px !important;
+  width: 36px !important;
+  height: 36px !important;
+  min-width: 36px !important;
+  min-height: 36px !important;
 }
 .header__icon--cart svg * {
-  stroke-width: .9 !important;
+  stroke-width: .8 !important;
 }
