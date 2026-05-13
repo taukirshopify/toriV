@@ -3404,9 +3404,11 @@ text-decoration: none;
 
 .facets__display .facets__header {
   display: none !important;
-}<label for="sort">Sort by:</label>
-<select id="categoryFilter" onchange="applyFilter()">
-  <option value="all">All Products</option>
-  <option value="low-price">Price: Low to High</option>
-  <option value="high-price">Price: High to Low</option>
-</select>
+}.facets-container {
+  background: #fff !important;
+  padding: 24px 40px !important;
+}
+
+.product-count {
+  display: none !important;
+}
