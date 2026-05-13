@@ -3204,7 +3204,7 @@ text-decoration: none;
 .banner,
 .slideshow,
 .shopify-section-group-header-group {
-  margin-top: 0 !important;
+  margin-top: 4 !important;
 }
 
 /* make menu text/icons stronger */
