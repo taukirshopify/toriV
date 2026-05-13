@@ -3224,11 +3224,15 @@ text-decoration: none;
 .announcement-bar {
   margin-top: 20px !important;
 }
-/* top tabs color */
-.tori-top-tabs a,
-.tori-top-tabs button,
-.tori-top-tabs .button {
+/* first top tab only */
+.tori-top-tabs a:first-child,
+.tori-top-tabs button:first-child {
   background: #c40000 !important;
   color: white !important;
   border-color: #c40000 !important;
+}
+.tori-top-tabs a:nth-child(2),
+.tori-top-tabs button:nth-child(2) {
+  background: white !important;
+  color: black !important;
 }
