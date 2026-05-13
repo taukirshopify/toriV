@@ -3307,12 +3307,7 @@ text-decoration: none;
 }
 .header__icon--cart svg * {
   stroke-width: .8 !important;
-}.header__submenu .list-menu__item:hover,
-.header__submenu .header__menu-item:hover,
-.header__submenu .list-menu__item--active,
-.header__submenu .header__menu-item--active,
-.header__submenu a:hover,
-.header__submenu a:focus {
+}.header__inline-menu li a:hover {
   background: #d40000 !important;
   color: white !important;
 }
