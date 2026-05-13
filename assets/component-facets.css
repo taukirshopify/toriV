@@ -1110,12 +1110,4 @@ input.mobile-facets__checkbox {
     padding: 0 1rem 1rem;
   }
 }
-/* smooth mobile filter drawer */
-.mobile-facets__inner {
-  transform: translateX(-100%) !important;
-  transition: transform 350ms ease !important;
-}
 
-.menu-opening .mobile-facets__inner {
-  transform: translateX(0) !important;
-}
