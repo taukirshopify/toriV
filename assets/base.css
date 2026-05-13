@@ -3469,4 +3469,13 @@ text-decoration: none;
 }.product-count,
 .product-count-vertical {
   display: none !important;
+}/* Hide duplicate apply buttons inside each filter submenu */
+.mobile-facets__submenu .mobile-facets__footer {
+  display: none !important;
+}
+
+/* Keep the main bottom apply button visible */
+.mobile-facets > .mobile-facets__footer,
+.mobile-facets__inner > .mobile-facets__footer {
+  display: flex !important;
 }
