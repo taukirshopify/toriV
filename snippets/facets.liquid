@@ -731,6 +731,21 @@
             </a>
           </facet-remove>
         </div>
+        <div class="custom-mobile-filter-footer">
+  <facet-remove class="mobile-facets__clear-wrapper">
+    <a href="{{ results_url }}" class="mobile-facets__clear underlined-link">
+      Clear
+    </a>
+  </facet-remove>
+
+  <button
+    type="button"
+    class="button button--primary"
+    onclick="this.closest('form').querySelectorAll('details[open]').forEach(function(d){d.removeAttribute('open')}); this.closest('.mobile-facets__wrapper').querySelector('summary').click();"
+  >
+    Apply
+  </button>
+</div>
       </form>
     </facet-filters-form>
   {%- endif -%}
