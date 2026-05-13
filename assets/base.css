@@ -3319,6 +3319,7 @@ text-decoration: none;
 }.header__inline-menu li a:hover {
   background: #d40000 !important;
   color: white !important;
-}.header__menu-item {
-  font-size: 1.9rem !important;
+}.header__inline-menu .list-menu__item {
+  font-size: 16px !important;
+  letter-spacing: .08em !important;
 }
