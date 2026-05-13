@@ -3274,9 +3274,5 @@ text-decoration: none;
   stroke-width: 1.5 !important;
 }
 
-/* specifically fix cart icon */
-.header__icon--cart .icon,
-.cart-count-bubble svg {
-  width: 4rem !important;
-  height: 4rem !important;
+
 }
