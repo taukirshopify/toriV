@@ -1110,31 +1110,4 @@ input.mobile-facets__checkbox {
     padding: 0 1rem 1rem;
   }
 }
-/* FORCE smooth filter drawer slide */
-.mobile-facets__wrapper {
-  display: block !important;
-  visibility: hidden;
-  opacity: 0;
-  transition: opacity 350ms ease, visibility 350ms ease !important;
-}
 
-details[open] .mobile-facets__wrapper {
-  visibility: visible;
-  opacity: 1;
-}
-
-.mobile-facets__disclosure,
-.mobile-facets__inner,
-.mobile-facets__main {
-  transition: transform 350ms ease !important;
-}
-
-.mobile-facets__inner {
-  transform: translateX(-100vw) !important;
-}
-
-details[open] .mobile-facets__inner,
-details.menu-opening .mobile-facets__inner,
-.menu-opening .mobile-facets__inner {
-  transform: translateX(0) !important;
-}
