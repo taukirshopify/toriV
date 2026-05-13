@@ -3278,7 +3278,14 @@ text-decoration: none;
 }.header__icon .icon-cart {
   width: 4rem !important;
   height: 4rem !important;
-}.header__icon--cart .icon-cart {
-  width: 28px !important;
-  height: 28px !important;
+}.header__icon--cart {
+  width: 44px !important;
+  height: 44px !important;
+}
+
+.header__icon--cart svg {
+  width: 30px !important;
+  height: 30px !important;
+  min-width: 30px !important;
+  min-height: 30px !important;
 }
