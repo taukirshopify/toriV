@@ -3311,4 +3311,12 @@ text-decoration: none;
   background: #c40000 !important;
   color: #ffffff !important;
   border-color: #c40000 !important;
+}.header__submenu .list-menu__item:hover,
+.header__submenu .header__menu-item:hover,
+.header__submenu .list-menu__item--active,
+.header__submenu .header__menu-item--active,
+.header__submenu a:hover,
+.header__submenu a:focus {
+  background: #d40000 !important;
+  color: white !important;
 }
