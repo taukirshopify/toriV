@@ -3470,3 +3470,86 @@ text-decoration: none;
 .product-count-vertical {
   display: none !important;
 }
+/* FILTER DRAWER - SLIDE FROM LEFT */
+.mobile-facets__inner {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: auto !important;
+  width: 420px !important;
+  max-width: 420px !important;
+  height: 100vh !important;
+  background: #fff !important;
+  overflow-y: auto !important;
+  transform: translateX(-100%) !important;
+  transition: transform .35s ease !important;
+  z-index: 99999 !important;
+}
+
+.menu-opening .mobile-facets__inner,
+.mobile-facets__disclosure[open] .mobile-facets__inner {
+  transform: translateX(0) !important;
+}
+
+/* gray overlay behind drawer */
+.mobile-facets__disclosure[open] > summary::before {
+  background: rgba(0,0,0,.28) !important;
+}
+
+/* close X inside drawer */
+.mobile-facets__close {
+  position: absolute !important;
+  top: 28px !important;
+  right: 28px !important;
+  left: auto !important;
+  z-index: 100000 !important;
+}
+
+/* drawer styling */
+.mobile-facets__header {
+  padding: 28px 32px !important;
+  border-bottom: 1px solid #ddd !important;
+}
+
+.mobile-facets__main {
+  padding: 0 32px 32px !important;
+}
+
+.mobile-facets__details {
+  border-bottom: 1px solid #ddd !important;
+  padding: 22px 0 !important;
+}
+
+.mobile-facets__summary {
+  pointer-events: none !important;
+  font-weight: 800 !important;
+  letter-spacing: .08em !important;
+  text-transform: uppercase !important;
+  color: #000 !important;
+}
+
+/* show the actual options */
+.mobile-facets__submenu {
+  position: static !important;
+  transform: none !important;
+  visibility: visible !important;
+  display: block !important;
+  background: transparent !important;
+  padding-top: 18px !important;
+}
+
+.mobile-facets__list {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr !important;
+  gap: 12px 20px !important;
+}
+
+.mobile-facets__item {
+  margin: 0 !important;
+}
+
+.product-count,
+.product-count-vertical,
+.facets__count {
+  display: none !important;
+}

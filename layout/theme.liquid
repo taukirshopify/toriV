@@ -319,6 +319,15 @@
 {%- endif -%}
 </script>
 <!-- PF EDT END -->
+<script>
+document.addEventListener('click', function () {
+  setTimeout(function () {
+    document.querySelectorAll('.mobile-facets__details').forEach(function (item) {
+      item.setAttribute('open', 'open');
+    });
+  }, 100);
+});
+</script>
 </body>
 </html>
 
