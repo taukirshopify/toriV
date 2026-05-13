@@ -3456,6 +3456,5 @@ text-decoration: none;
   display: none !important;
 }
 /* hide only the visible Featured dropdown */
-.facet-filters.sorting {
-  display: none !important;
+
 }
