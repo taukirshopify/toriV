@@ -3405,42 +3405,49 @@ text-decoration: none;
 .facets__display .facets__header {
   display: none !important;
 }
-/* LEFT FILTER DRAWER - ONLY 390PX WIDE */
-.mobile-facets__disclosure,
-.mobile-facets__wrapper,
-.mobile-facets {
-  position: static !important;
-  width: auto !important;
-  height: auto !important;
-  background: transparent !important;
-}
-
+/* FILTER DRAWER: LEFT PANEL ONLY */
 .mobile-facets__inner {
   position: fixed !important;
   top: 0 !important;
   left: 0 !important;
+  right: auto !important;
   width: 390px !important;
   max-width: 390px !important;
   height: 100vh !important;
   background: #fff !important;
-  z-index: 99999 !important;
   overflow-y: auto !important;
+  z-index: 10000 !important;
+  transform: none !important;
 }
 
-.mobile-facets__main {
+/* keep close X inside the drawer */
+.mobile-facets__close {
+  position: absolute !important;
+  top: 24px !important;
+  right: 24px !important;
+  left: auto !important;
+  z-index: 10001 !important;
+}
+
+/* stop the full white cover */
+.mobile-facets__wrapper,
+.mobile-facets {
+  background: transparent !important;
+}
+
+.mobile-facets__disclosure[open] > summary::before {
+  background: rgba(0,0,0,.25) !important;
+}
+
+/* drawer styling */
+.mobile-facets__header,
+.mobile-facets__main,
+.mobile-facets__footer {
   background: #fff !important;
 }
 
-.mobile-facets__close {
-  position: fixed !important;
-  top: 30px !important;
-  right: 30px !important;
-  z-index: 100000 !important;
-}
-
-/* IMPORTANT: make overlay transparent */
-.mobile-facets__disclosure[open] > summary::before,
-.mobile-facets__wrapper::before,
-.mobile-facets::before {
-  background: transparent !important;
+.product-count,
+.product-count-vertical,
+.facets__count {
+  display: none !important;
 }
