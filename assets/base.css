@@ -3455,3 +3455,8 @@ text-decoration: none;
 #shopify-section-template--16775790395645__product-grid .facets__count {
   display: none !important;
 }
+/* hide standalone sort dropdown */
+.facet-filters.sorting,
+.facet-filters {
+  display: none !important;
+}
