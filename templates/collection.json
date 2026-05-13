@@ -11,6 +11,7 @@
   "sections": {
     "banner": {
       "type": "main-collection-banner",
+      "disabled": true,
       "settings": {
         "show_collection_description": false,
         "show_collection_image": false,
@@ -22,7 +23,9 @@
       "custom_css": [
         ":host,* {--color-background: 255, 255, 255 !important; --gradient-background: #ffffff !important;}",
         ".collection,.collection *,.product-grid,.product-grid *,.grid,.grid * {background-color: transparent !important;}",
-        ".collection,.product-grid-container {background: #ffffff !important;}"
+        ".collection,.product-grid-container {background: #ffffff !important;}",
+        ".facets__wrapper,.facets-container,.facets,#FacetFiltersForm,#FacetsWrapperDesktop {background: #ffffff !important;}",
+        ".product-grid-container {background: #ffffff !important;}"
       ],
       "settings": {
         "products_per_page": 16,
