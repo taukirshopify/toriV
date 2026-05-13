@@ -3470,3 +3470,22 @@ text-decoration: none;
 .product-count-vertical {
   display: none !important;
 }
+/* Smooth mobile filter drawer animation */
+.mobile-facets__wrapper {
+  visibility: hidden;
+  transition: visibility .3s ease;
+}
+
+details[open] > .mobile-facets__wrapper {
+  visibility: visible;
+}
+
+.mobile-facets__inner {
+  transform: translateX(-100%);
+  transition: transform .35s cubic-bezier(.4,0,.2,1) !important;
+  will-change: transform;
+}
+
+details[open] .mobile-facets__inner {
+  transform: translateX(0);
+}
