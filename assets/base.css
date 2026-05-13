@@ -3469,4 +3469,17 @@ text-decoration: none;
 }.product-count,
 .product-count-vertical {
   display: none !important;
+}body {
+  background-image: url('https://cdn.shopify.com/s/files/1/0607/4492/5437/files/grainy_pinkish_red_light_background_simple_design_1.jpg?v=1778695988') !important;
+  background-size: cover !important;
+  background-position: center !important;
+  background-attachment: fixed !important;
+}
+
+#shopify-section-template--16775790395645__product-grid,
+#shopify-section-template--16775790395645__product-grid * {
+  background: transparent !important;
+  background-color: transparent !important;
+  --gradient-background: transparent !important;
+  --color-background: transparent !important;
 }
