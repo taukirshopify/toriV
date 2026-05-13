@@ -3466,4 +3466,7 @@ text-decoration: none;
   display: inline-flex !important;
   visibility: visible !important;
   opacity: 1 !important;
+}.product-count,
+.product-count-vertical {
+  display: none !important;
 }
