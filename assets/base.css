@@ -3364,10 +3364,3 @@ text-decoration: none;
   --color-background: 255, 255, 255 !important;
   --gradient-background: #ffffff !important;
 }
-.announcement-bar {
-  background: #510F0F !important;
-}
-
-.announcement-bar__message {
-  color: white !important;
-}
