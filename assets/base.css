@@ -3455,8 +3455,15 @@ text-decoration: none;
 #shopify-section-template--16775790395645__product-grid .facets__count {
   display: none !important;
 }
-/* hide standalone sort dropdown */
-.facet-filters.sorting,
-.facet-filters {
+/* hide ONLY the standalone Featured sort dropdown */
+.facet-filters.sorting {
   display: none !important;
+}
+
+/* keep Filter visible */
+.mobile-facets__open-wrapper,
+.mobile-facets__open {
+  display: flex !important;
+  visibility: visible !important;
+  opacity: 1 !important;
 }
