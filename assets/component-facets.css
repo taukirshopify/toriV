@@ -600,22 +600,15 @@ a.active-facets__button.focused .active-facets__button-inner,
 }
 
 .mobile-facets__inner {
-  transform: translateX(100%);
-  opacity: 0;
-  transition:
-    transform 0.35s cubic-bezier(0.4, 0, 0.2, 1),
-    opacity 0.25s ease;
+  transition: transform 350ms ease !important;
 }
 
-.menu-opening .mobile-facets__inner,
-details[open] .mobile-facets__inner {
+.menu-opening .mobile-facets__inner {
   transform: translateX(0);
-  opacity: 1;
 }
 
 .js .disclosure-has-popup:not(.menu-opening) .mobile-facets__inner {
-  transform: translateX(100%);
-  opacity: 0;
+  transform: translateX(105vw);
 }
 .mobile-facets__header {
   border-bottom: 0.1rem solid rgba(var(--color-foreground), 0.08);
