@@ -183,7 +183,7 @@
           "link_list_WgBPrq"
         ],
         "settings": {
-          "color_scheme": "background-1",
+          "color_scheme": "accent-1",
           "newsletter_enable": true,
           "newsletter_heading": "Subscribe to our emails",
           "show_social": true,
@@ -192,7 +192,7 @@
           "payment_enable": true,
           "margin_top": 0,
           "padding_top": 0,
-          "padding_bottom": 0
+          "padding_bottom": 20
         }
       },
       "main-password-header": {
