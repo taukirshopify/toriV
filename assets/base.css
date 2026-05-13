@@ -3259,10 +3259,7 @@ text-decoration: none;
   padding: 18px 40px !important;
 }
 
-.header__heading,
-.header__heading-link {
-  display: none !important;
-}
+
 
 .slideshow,
 .banner {
