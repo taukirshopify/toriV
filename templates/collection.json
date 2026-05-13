@@ -28,7 +28,6 @@
         "products_per_page": 16,
         "columns_desktop": 3,
         "image_ratio": "adapt",
-        "bg": "shopify://shop_images/grainy_pinkish_red_light_background_simple_design_1.jpg",
         "show_secondary_image": true,
         "show_vendor": false,
         "show_rating": false,
