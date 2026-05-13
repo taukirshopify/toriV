@@ -3398,3 +3398,19 @@ text-decoration: none;
   color: #000000 !important;
   background: transparent !important;
 }
+/* REMOVE PRODUCT COUNT */
+.product-count,
+.product-count-vertical,
+.count-bubble,
+.facets__heading,
+.facets__selected {
+  display: none !important;
+}
+
+/* REMOVE "highest price is..." */
+.facets__summary,
+.facets__display p,
+.price-range__info,
+.active-facets {
+  display: none !important;
+}
