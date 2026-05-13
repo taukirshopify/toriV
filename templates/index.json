@@ -86,22 +86,6 @@
         "accessibility_info": "Slideshow about our brand"
       }
     },
-    "64c75373-01b9-41ea-975e-581740d70451": {
-      "type": "image-banner",
-      "settings": {
-        "image": "shopify://shop_images/Copy_of_Copy_of_Copy_of_Copy_of_Copy_of_Copy_of_Copy_of_Subscribe_to_our_emails_1200_x_200px_c4d04530-0c84-4950-bc44-06854a12ed58.png",
-        "image_overlay_opacity": 0,
-        "image_height": "small",
-        "adapt_height_first_image": true,
-        "desktop_content_position": "middle-center",
-        "show_text_box": true,
-        "desktop_content_alignment": "center",
-        "color_scheme": "background-1",
-        "mobile_content_alignment": "center",
-        "stack_images_on_mobile": true,
-        "show_text_below": true
-      }
-    },
     "c0185348-cad4-42f3-bb37-3813f28cbe7e": {
       "type": "slideshow",
       "blocks": {
@@ -183,22 +167,6 @@
         "padding_bottom": 0
       }
     },
-    "fa473662-d9d4-455d-ba8f-195bae1273e4": {
-      "type": "image-banner",
-      "settings": {
-        "image": "shopify://shop_images/Copy_of_Copy_of_Copy_of_Copy_of_Copy_of_Copy_of_Subscribe_to_our_emails_1200_x_200px.png",
-        "image_overlay_opacity": 0,
-        "image_height": "small",
-        "adapt_height_first_image": true,
-        "desktop_content_position": "middle-center",
-        "show_text_box": true,
-        "desktop_content_alignment": "center",
-        "color_scheme": "background-1",
-        "mobile_content_alignment": "center",
-        "stack_images_on_mobile": true,
-        "show_text_below": true
-      }
-    },
     "2e1fa2cf-a787-45b5-96d1-f67290d1b7d2": {
       "type": "newsletter",
       "blocks": {
@@ -220,11 +188,9 @@
   },
   "order": [
     "86ef680f-5242-445f-b47e-6fad6f327692",
-    "64c75373-01b9-41ea-975e-581740d70451",
     "c0185348-cad4-42f3-bb37-3813f28cbe7e",
     "15f7daee-2af7-45ba-87e0-799531b673cf",
     "6fe666f7-d173-42bd-a5b2-fb3c3c9d29bd",
-    "fa473662-d9d4-455d-ba8f-195bae1273e4",
     "2e1fa2cf-a787-45b5-96d1-f67290d1b7d2"
   ]
 }
