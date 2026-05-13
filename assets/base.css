@@ -3360,7 +3360,7 @@ text-decoration: none;
   background: #ffffff !important;
   background-color: #ffffff !important;
   --color-background: 255, 255, 255 !important;
-  --gradient-background: #ffffff !important;
+  
 }
 /* FIX FILTER/SORT BAR */
 .facets-container {
