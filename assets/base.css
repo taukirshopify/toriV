@@ -3278,14 +3278,19 @@ text-decoration: none;
 }.header__icon .icon-cart {
   width: 4rem !important;
   height: 4rem !important;
-}.header__icon--cart {
-  width: 44px !important;
-  height: 44px !important;
-}
+}<svg class="icon icon-cart"
+     xmlns="http://www.w3.org/2000/svg"
+     viewBox="0 0 24 24"
+     fill="none"
+     stroke="currentColor"
+     stroke-width=".72"
+     stroke-linecap="round"
+     stroke-linejoin="round">
 
-.header__icon--cart svg {
-  width: 30px !important;
-  height: 30px !important;
-  min-width: 30px !important;
-  min-height: 30px !important;
-}
+  <path d="M4 6H6.2" />
+  <path d="M6.2 6L8.5 14H18.5L20 8H9.2" />
+
+  <circle cx="10" cy="18" r="1"/>
+  <circle cx="17" cy="18" r="1"/>
+
+</svg>
