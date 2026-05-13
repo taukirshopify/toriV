@@ -3267,4 +3267,16 @@ text-decoration: none;
 .slideshow,
 .banner {
   margin-top: 0 !important;
+}/* make all header icons same size */
+.header__icon .icon {
+  width: 2rem !important;
+  height: 2rem !important;
+  stroke-width: 1.5 !important;
+}
+
+/* specifically fix cart icon */
+.header__icon--cart .icon,
+.cart-count-bubble svg {
+  width: 2rem !important;
+  height: 2rem !important;
 }
