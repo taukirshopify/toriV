@@ -3405,35 +3405,53 @@ text-decoration: none;
 .facets__display .facets__header {
   display: none !important;
 }
-/* PUT FILTER + SORT TOGETHER ON LEFT */
-.facets-container {
-  padding: 20px 32px !important;
-  background: #fff !important;
+/* FIX FILTER DRAWER LEFT PANEL */
+#shopify-section-template--16775790395645__product-grid .mobile-facets__inner {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: auto !important;
+  width: 390px !important;
+  max-width: 390px !important;
+  min-width: 390px !important;
+  height: 100vh !important;
+  background: #ffffff !important;
+  z-index: 99999 !important;
+  overflow-y: auto !important;
+  transform: none !important;
 }
 
-.facets__form {
-  display: flex !important;
-  justify-content: flex-start !important;
-  align-items: center !important;
-  gap: 28px !important;
-  width: 100% !important;
+/* stop the full white overlay */
+#shopify-section-template--16775790395645__product-grid .mobile-facets,
+#shopify-section-template--16775790395645__product-grid .mobile-facets__wrapper {
+  background: transparent !important;
+  width: 390px !important;
+  max-width: 390px !important;
 }
 
-.mobile-facets__open-wrapper {
-  margin-right: 18px !important;
+/* put X inside the drawer */
+#shopify-section-template--16775790395645__product-grid .mobile-facets__close {
+  position: fixed !important;
+  top: 24px !important;
+  left: 340px !important;
+  right: auto !important;
+  z-index: 100000 !important;
 }
 
-.facet-filters {
-  margin-left: 0 !important;
+/* darken products behind, not cover them white */
+#shopify-section-template--16775790395645__product-grid .mobile-facets__disclosure[open] > summary::before {
+  background: rgba(0,0,0,.25) !important;
 }
 
-.facet-filters__field {
-  display: flex !important;
-  align-items: center !important;
-  gap: 10px !important;
+/* drawer styling */
+#shopify-section-template--16775790395645__product-grid .mobile-facets__header,
+#shopify-section-template--16775790395645__product-grid .mobile-facets__main,
+#shopify-section-template--16775790395645__product-grid .mobile-facets__footer {
+  background: #ffffff !important;
 }
 
-.product-count,
-.product-count-vertical {
+#shopify-section-template--16775790395645__product-grid .product-count,
+#shopify-section-template--16775790395645__product-grid .product-count-vertical,
+#shopify-section-template--16775790395645__product-grid .facets__count {
   display: none !important;
 }
