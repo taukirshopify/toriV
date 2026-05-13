@@ -170,29 +170,17 @@
       },
       "footer": {
         "type": "footer",
-        "blocks": {
-          "link_list_WgBPrq": {
-            "type": "link_list",
-            "settings": {
-              "heading": "Footer",
-              "menu": "footer"
-            }
-          }
-        },
-        "block_order": [
-          "link_list_WgBPrq"
-        ],
         "settings": {
           "color_scheme": "accent-1",
-          "newsletter_enable": true,
+          "newsletter_enable": false,
           "newsletter_heading": "Subscribe to our emails",
-          "show_social": true,
+          "show_social": false,
           "enable_country_selector": false,
           "enable_language_selector": true,
-          "payment_enable": true,
+          "payment_enable": false,
           "margin_top": 0,
           "padding_top": 0,
-          "padding_bottom": 20
+          "padding_bottom": 36
         }
       },
       "main-password-header": {

@@ -169,20 +169,21 @@
     },
     "2e1fa2cf-a787-45b5-96d1-f67290d1b7d2": {
       "type": "newsletter",
-      "blocks": {
-        "template--17590340223254__2e1fa2cf-a787-45b5-96d1-f67290d1b7d2-1673893359d8684007-2": {
-          "type": "email_form",
-          "settings": {}
-        }
-      },
-      "block_order": [
-        "template--17590340223254__2e1fa2cf-a787-45b5-96d1-f67290d1b7d2-1673893359d8684007-2"
-      ],
       "settings": {
         "color_scheme": "accent-1",
         "full_width": true,
         "padding_top": 0,
         "padding_bottom": 24
+      }
+    },
+    "custom_liquid_XLVjX9": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<div class=\"tv-footer\">\n  <div class=\"tv-footer-grid\">\n    <div>\n      <h4>TORI V</h4>\n      <a href=\"/pages/store\">Store</a>\n      <a href=\"/pages/soundboard\">Soundboard</a>\n      <a href=\"/pages/sign-up\">VIP Sign Up</a>\n      <a href=\"/pages/tour\">Tour</a>\n    </div>\n\n    <div>\n      <h4>SOCIALS</h4>\n      <a href=\"#\">Instagram</a>\n      <a href=\"#\">TikTok</a>\n      <a href=\"#\">YouTube</a>\n      <a href=\"#\">Spotify</a>\n    </div>\n\n    <div>\n      <h4>SUPPORT</h4>\n      <a href=\"/pages/contact\">Contact</a>\n      <a href=\"/policies/privacy-policy\">Privacy</a>\n      <a href=\"/policies/refund-policy\">Refunds</a>\n      <a href=\"/policies/shipping-policy\">Shipping</a>\n    </div>\n\n    <div>\n      <h4>JOIN THE LOONEEZ</h4>\n      <input type=\"email\" placeholder=\"YOUR EMAIL\">\n      <button>SIGN UP NOW</button>\n    </div>\n  </div>\n</div>\n\n<style>\n.tv-footer {\n  background: #000000;\n  padding: 90px 80px;\n  color: white;\n}\n\n.tv-footer-grid {\n  display: grid;\n  grid-template-columns: repeat(4, 1fr);\n  gap: 80px;\n}\n\n.tv-footer h4 {\n  font-size: 14px;\n  letter-spacing: .12em;\n  margin-bottom: 24px;\n  color: white;\n}\n\n.tv-footer a {\n  display: block;\n  color: #d7d7d7;\n  text-decoration: none;\n  margin-bottom: 14px;\n  font-size: 14px;\n}\n\n.tv-footer input {\n  width: 100%;\n  background: transparent;\n  border: 1px solid white;\n  color: white;\n  padding: 14px;\n  margin-bottom: 18px;\n}\n\n.tv-footer button {\n  width: 100%;\n  background: transparent;\n  border: 1px solid white;\n  color: white;\n  padding: 16px;\n  border-radius: 999px;\n}\n</style>",
+        "color_scheme": "accent-1",
+        "padding_top": 40,
+        "padding_bottom": 52
       }
     }
   },
@@ -191,6 +192,7 @@
     "c0185348-cad4-42f3-bb37-3813f28cbe7e",
     "15f7daee-2af7-45ba-87e0-799531b673cf",
     "6fe666f7-d173-42bd-a5b2-fb3c3c9d29bd",
-    "2e1fa2cf-a787-45b5-96d1-f67290d1b7d2"
+    "2e1fa2cf-a787-45b5-96d1-f67290d1b7d2",
+    "custom_liquid_XLVjX9"
   ]
 }
