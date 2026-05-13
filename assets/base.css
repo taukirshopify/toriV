@@ -3469,4 +3469,32 @@ text-decoration: none;
 }.product-count,
 .product-count-vertical {
   display: none !important;
+}/* hide all duplicate filter-section apply buttons */
+.mobile-facets__details .mobile-facets__footer {
+  display: none !important;
+}
+
+/* one main apply button at bottom */
+.custom-mobile-filter-footer {
+  position: sticky;
+  bottom: 0;
+  z-index: 50;
+  background: #fff;
+  border-top: 1px solid #ddd;
+  padding: 16px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 18px;
+}
+
+.custom-mobile-filter-footer .button {
+  min-width: 180px;
+  min-height: 52px;
+  border-radius: 12px;
+}
+
+/* smoother drawer slide */
+.mobile-facets__inner {
+  transition: transform 0.35s ease !important;
 }
