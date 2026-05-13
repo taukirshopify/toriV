@@ -3180,3 +3180,42 @@ text-decoration: none;
     display: none;
   }
 }
+/* space below announcement bar */
+.tori-top-tabs {
+  margin-top: 12px;
+  position: relative;
+  z-index: 20;
+}
+
+/* make real header visible */
+.header-wrapper {
+  background: rgba(255,255,255,.92) !important;
+  backdrop-filter: blur(6px);
+  position: relative;
+  z-index: 15;
+}
+
+/* give menu/header its own section */
+.shopify-section-header-sticky {
+  background: #fff !important;
+}
+
+/* spacing between menu and slideshow */
+.banner,
+.slideshow,
+.shopify-section-group-header-group {
+  margin-top: 0 !important;
+}
+
+/* make menu text/icons stronger */
+.header__menu-item,
+.header__icon,
+.header__icon span {
+  color: #000 !important;
+  opacity: 1 !important;
+}
+
+/* logo visibility */
+.header__heading-link {
+  opacity: 1 !important;
+}
