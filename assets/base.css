@@ -3305,19 +3305,6 @@ text-decoration: none;
   min-width: 30px !important;
   min-height: 30px !important;
 }
-<svg class="icon icon-cart"
-     xmlns="http://www.w3.org/2000/svg"
-     viewBox="0 0 24 24"
-     fill="none"
-     stroke="currentColor"
-     stroke-width=".55"
-     stroke-linecap="round"
-     stroke-linejoin="round">
-
-  <path d="M4 6H6" />
-  <path d="M6 6L8 14H18L19.5 8H8.8" />
-
-  <circle cx="10" cy="18" r=".8"/>
-  <circle cx="17" cy="18" r=".8"/>
-
-</svg>
+.header__icon--cart svg * {
+  stroke-width: .55 !important;
+}
