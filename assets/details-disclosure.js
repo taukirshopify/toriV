@@ -25,7 +25,20 @@ class DetailsDisclosure extends HTMLElement {
   }
 
   close() {
+    if (this.mainDetailsToggle.classList.contains('mobile-facets__disclosure')) {
+  const drawer = this.mainDetailsToggle.querySelector('.mobile-facets__inner');
+  if (drawer) {
+    drawer.style.transform = 'translateX(105vw)';
+    setTimeout(() => {
+      this.mainDetailsToggle.removeAttribute('open');
+      drawer.style.transform = '';
+    }, 350);
+  } else {
     this.mainDetailsToggle.removeAttribute('open');
+  }
+} else {
+  this.mainDetailsToggle.removeAttribute('open');
+}
     this.mainDetailsToggle.querySelector('summary').setAttribute('aria-expanded', false);
   }
 }
