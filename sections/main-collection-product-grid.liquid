@@ -90,11 +90,7 @@
       </aside>
     {%- endif -%}
 
-    <div
-  class="product-grid-container"
-  id="ProductGridContainer"
-  style="background-image: url('https://cdn.shopify.com/s/files/1/0607/4492/5437/files/grainy_pinkish_red_light_background_simple_design_1.jpg?v=1778695988'); background-size: cover; background-position: center; background-repeat: no-repeat; background-attachment: fixed;"
->
+    <div class="product-grid-container" id="ProductGridContainer">
       {%- paginate collection.products by section.settings.products_per_page -%}
         {%- if collection.products.size == 0 -%}
           <div class="collection collection--empty page-width" id="product-grid" data-id="{{ section.id }}">
