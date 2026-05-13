@@ -3236,3 +3236,12 @@ text-decoration: none;
   background: white !important;
   color: black !important;
 }
+/* fix announcement bar hover disappearing */
+.announcement-bar,
+.announcement-bar:hover,
+.announcement-bar *:hover {
+  opacity: 1 !important;
+  visibility: visible !important;
+  background-color: #c40000 !important;
+  color: white !important;
+}
