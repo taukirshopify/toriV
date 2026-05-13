@@ -3307,7 +3307,8 @@ text-decoration: none;
 }
 .header__icon--cart svg * {
   stroke-width: .8 !important;
-}.header__inline-menu li a:hover {
-  background: #d40000 !important;
-  color: white !important;
+}.tori-top-tabs a:nth-child(2):hover {
+  background: #c40000 !important;
+  color: #ffffff !important;
+  border-color: #c40000 !important;
 }
