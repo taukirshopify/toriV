@@ -3469,4 +3469,11 @@ text-decoration: none;
 }.product-count,
 .product-count-vertical {
   display: none !important;
+}/* Remove white collection background */
+#shopify-section-template--16775790395645__product-grid,
+#shopify-section-template--16775790395645__product-grid * {
+  --gradient-background: transparent !important;
+  --color-background: transparent !important;
+  background: transparent !important;
+  background-color: transparent !important;
 }
