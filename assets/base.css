@@ -3245,3 +3245,26 @@ text-decoration: none;
   background-color: #c40000 !important;
   color: white !important;
 }
+/* force header into its own white section above slideshow */
+.header-wrapper {
+  background: #ffffff !important;
+  position: relative !important;
+  z-index: 50 !important;
+  padding-top: 18px !important;
+  padding-bottom: 18px !important;
+}
+
+.header {
+  background: #ffffff !important;
+}
+
+.header__menu-item,
+.header__menu-item span,
+.header__icon,
+.header__heading-link {
+  color: #000000 !important;
+}
+
+.shopify-section-header-sticky {
+  background: #ffffff !important;
+}
