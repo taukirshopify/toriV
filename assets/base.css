@@ -3300,10 +3300,10 @@ text-decoration: none;
 }
 
 .header__icon--cart svg {
-  width: 30px !important;
-  height: 30px !important;
-  min-width: 30px !important;
-  min-height: 30px !important;
+  width: 38px !important;
+  height: 38px !important;
+  min-width: 38px !important;
+  min-height: 38px !important;
 }
 .header__icon--cart svg * {
   stroke-width: .9 !important;
