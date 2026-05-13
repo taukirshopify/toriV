@@ -3347,21 +3347,7 @@ text-decoration: none;
   margin: 80px auto !important;
   padding: 40px !important;
 }
-/* FORCE REMOVE PINK FROM COLLECTION PRODUCT GRID */
-#shopify-section-template--16775790395645__product-grid,
-#shopify-section-template--16775790395645__product-grid *,
-#shopify-section-template--16775790395645__product-grid .gradient,
-#shopify-section-template--16775790395645__product-grid .color-background-2,
-#shopify-section-template--16775790395645__product-grid .facets__wrapper,
-#shopify-section-template--16775790395645__product-grid #FacetsWrapperDesktop,
-#shopify-section-template--16775790395645__product-grid .product-grid-container,
-#shopify-section-template--16775790395645__product-grid .collection,
-#shopify-section-template--16775790395645__product-grid .page-width {
-  background: #ffffff !important;
-  background-color: #ffffff !important;
-  --color-background: 255, 255, 255 !important;
-  --gradient-background: #ffffff !important;
-}
+
 /* FIX FILTER/SORT BAR */
 .facets-container {
   display: grid !important;
@@ -3469,4 +3455,24 @@ text-decoration: none;
 }.product-count,
 .product-count-vertical {
   display: none !important;
+}
+/* MERCH PAGE BACKGROUND IMAGE */
+#shopify-section-template--16775790395645__product-grid {
+  background-image: url('https://cdn.shopify.com/s/files/1/0607/4492/5437/files/grainy_pinkish_red_light_background_simple_design_1.jpg?v=1778695988') !important;
+  background-size: cover !important;
+  background-position: center center !important;
+  background-repeat: no-repeat !important;
+  background-attachment: fixed !important;
+}
+
+/* LET BACKGROUND SHOW THROUGH PRODUCT GRID */
+#shopify-section-template--16775790395645__product-grid,
+#shopify-section-template--16775790395645__product-grid .collection,
+#shopify-section-template--16775790395645__product-grid .product-grid-container,
+#shopify-section-template--16775790395645__product-grid .product-grid,
+#shopify-section-template--16775790395645__product-grid .grid,
+#shopify-section-template--16775790395645__product-grid .page-width {
+  background-color: transparent !important;
+  --color-background: transparent !important;
+  --gradient-background: transparent !important;
 }
