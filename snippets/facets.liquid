@@ -485,7 +485,14 @@
                           {%- endfor -%}
                         </ul>
 
-                        
+                        <div class="no-js-hidden mobile-facets__footer gradient">
+                          <facet-remove class="mobile-facets__clear-wrapper">
+                            <a href="{{ results_url }}" class="mobile-facets__clear underlined-link">{{ 'products.facets.clear' | t }}</a>
+                          </facet-remove>
+                          <button type="button" class="no-js-hidden button button--primary" onclick="this.closest('.mobile-facets__wrapper').querySelector('summary').click()">{{ 'products.facets.apply' | t }}</button>
+                          <noscript><button class="button button--primary">{{ 'products.facets.apply' | t }}</button></noscript>
+                        </div>
+                      </div>
                     </details>
                   {% when 'price_range' %}
                     <details id="Details-Mobile-{{ forloop.index }}-{{ section.id }}" class="mobile-facets__details js-filter" data-index="mobile-{{ forloop.index }}">
