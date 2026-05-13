@@ -3277,6 +3277,6 @@ text-decoration: none;
 /* specifically fix cart icon */
 .header__icon--cart .icon,
 .cart-count-bubble svg {
-  width: 5rem !important;
-  height: 5rem !important;
+  width: 4rem !important;
+  height: 4rem !important;
 }
