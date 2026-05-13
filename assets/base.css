@@ -2252,6 +2252,7 @@ input[type='checkbox'] {
 
 nav.header__inline-menu {
   width: 79%;
+  zoom: 1.25;
 }
 .list-menu--inline {
   display: inline-flex;
