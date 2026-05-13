@@ -3182,7 +3182,7 @@ text-decoration: none;
 }
 /* space below announcement bar */
 .tori-top-tabs {
-  margin-top: 12px;
+  margin-top: 20px;
   position: relative;
   z-index: 20;
 }
@@ -3204,7 +3204,7 @@ text-decoration: none;
 .banner,
 .slideshow,
 .shopify-section-group-header-group {
-  margin-top: 4 !important;
+  margin-top: 0 !important;
 }
 
 /* make menu text/icons stronger */
