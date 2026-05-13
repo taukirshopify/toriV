@@ -328,6 +328,42 @@ document.addEventListener('click', function () {
   }, 100);
 });
 </script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  const drawer = document.querySelector('menu-drawer.mobile-facets__wrapper');
+  if (!drawer) return;
+
+  const details = drawer.querySelector('details.mobile-facets__disclosure');
+  const inner = drawer.querySelector('.mobile-facets__inner');
+  const closeBtn = drawer.querySelector('.mobile-facets__close');
+
+  if (!details || !inner) return;
+
+  inner.style.transition = 'transform 350ms ease';
+  inner.style.transform = 'translateX(-100%)';
+
+  details.addEventListener('toggle', function () {
+    if (details.open) {
+      requestAnimationFrame(() => {
+        inner.style.transform = 'translateX(0)';
+      });
+    }
+  });
+
+  function smoothClose(e) {
+    e.preventDefault();
+    inner.style.transform = 'translateX(-100%)';
+
+    setTimeout(function () {
+      details.removeAttribute('open');
+    }, 350);
+  }
+
+  if (closeBtn) {
+    closeBtn.addEventListener('click', smoothClose);
+  }
+});
+</script>
 </body>
 
 </html>
