@@ -31,6 +31,11 @@
         "heading_cQzkQL",
         "text_4tbKt9"
       ],
+      "custom_css": [
+        ".banner {margin-top: 160px !important;}",
+        ".banner {margin-top: 150px !important;}",
+        ".banner__media img {object-fit: contain !important; background: #000 !important;}"
+      ],
       "name": "t:sections.image-banner.presets.name",
       "settings": {
         "image": "shopify://shop_images/torivbigbadwolf.png",
