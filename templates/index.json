@@ -9,81 +9,41 @@
  */
 {
   "sections": {
-    "86ef680f-5242-445f-b47e-6fad6f327692": {
-      "type": "slideshow",
+    "image_banner_EYAaJY": {
+      "type": "image-banner",
       "blocks": {
-        "template--17811044335923__86ef680f-5242-445f-b47e-6fad6f327692-16750357646d3395a8-0": {
-          "type": "slide",
+        "heading_cQzkQL": {
+          "type": "heading",
           "settings": {
-            "image": "shopify://shop_images/Blank_3500_x_1875_fa0bd9ec-cb51-4d12-8a21-5f1e0f9efbd0.png",
-            "url": "https://www.youtube.com/watch?v=vgAKE5ZqdEQ",
             "heading": "",
-            "heading_size": "h1",
-            "subheading": "",
-            "button_label": "",
-            "link": "https://www.youtube.com/watch?v=vgAKE5ZqdEQ",
-            "button_style_secondary": false,
-            "box_align": "middle-center",
-            "show_text_box": false,
-            "text_alignment": "center",
-            "image_overlay_opacity": 0,
-            "color_scheme": "background-1",
-            "text_alignment_mobile": "center"
+            "heading_size": "h1"
           }
         },
-        "3a480d71-9b96-47f2-9783-fef4b75a618c": {
-          "type": "slide",
+        "text_4tbKt9": {
+          "type": "text",
           "settings": {
-            "image": "shopify://shop_images/Blank_3500_x_1875_copy_2.png",
-            "url": "https://www.youtube.com/watch?v=FXm6tbncXVw",
-            "heading": "",
-            "heading_size": "h2",
-            "subheading": "",
-            "button_label": "",
-            "link": "",
-            "button_style_secondary": false,
-            "box_align": "middle-center",
-            "show_text_box": false,
-            "text_alignment": "center",
-            "image_overlay_opacity": 0,
-            "color_scheme": "background-2",
-            "text_alignment_mobile": "center"
-          }
-        },
-        "3c836511-e3a6-4812-8fef-52cc0b1297fb": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify://shop_images/SECRETSslide.png",
-            "url": "https://www.youtube.com/watch?v=zjGr8vHikmk",
-            "heading": "",
-            "heading_size": "h1",
-            "subheading": "",
-            "button_label": "",
-            "link": "",
-            "button_style_secondary": false,
-            "box_align": "middle-center",
-            "show_text_box": true,
-            "text_alignment": "center",
-            "image_overlay_opacity": 0,
-            "color_scheme": "background-1",
-            "text_alignment_mobile": "center"
+            "text": "",
+            "text_style": "body"
           }
         }
       },
       "block_order": [
-        "template--17811044335923__86ef680f-5242-445f-b47e-6fad6f327692-16750357646d3395a8-0",
-        "3a480d71-9b96-47f2-9783-fef4b75a618c",
-        "3c836511-e3a6-4812-8fef-52cc0b1297fb"
+        "heading_cQzkQL",
+        "text_4tbKt9"
       ],
-      "custom_css": [],
+      "name": "t:sections.image-banner.presets.name",
       "settings": {
-        "layout": "full_bleed",
-        "slide_height": "adapt_image",
-        "slider_visual": "counter",
-        "auto_rotate": true,
-        "change_slides_speed": 7,
-        "show_text_below": false,
-        "accessibility_info": "Slideshow about our brand"
+        "image": "shopify://shop_images/torivbigbadwolf.png",
+        "image_overlay_opacity": 0,
+        "image_height": "large",
+        "adapt_height_first_image": false,
+        "desktop_content_position": "middle-center",
+        "show_text_box": false,
+        "desktop_content_alignment": "center",
+        "color_scheme": "background-1",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": false
       }
     },
     "c0185348-cad4-42f3-bb37-3813f28cbe7e": {
@@ -178,7 +138,7 @@
     }
   },
   "order": [
-    "86ef680f-5242-445f-b47e-6fad6f327692",
+    "image_banner_EYAaJY",
     "c0185348-cad4-42f3-bb37-3813f28cbe7e",
     "15f7daee-2af7-45ba-87e0-799531b673cf",
     "6fe666f7-d173-42bd-a5b2-fb3c3c9d29bd",
