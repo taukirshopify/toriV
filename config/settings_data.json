@@ -157,7 +157,7 @@
           ".header__heading-logo {width: 200px !important; max-width: 200px !important; height: auto !important;}"
         ],
         "settings": {
-          "color_scheme": "background-1",
+          "color_scheme": "accent-1",
           "logo": "shopify://shop_images/kling_20260513__Create_a_s_3284_0-ezgif.com-crop.gif",
           "logo_width": 250,
           "logo_position": "top-left",
