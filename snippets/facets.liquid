@@ -441,24 +441,26 @@
                 </p>
               </div>
             </div>
-            <div class="mobile-facets__main has-submenu gradient">
+            <div class="mobile-facets__main gradient">
               {%- if enable_filtering -%}
                 {%- for filter in results.filters -%}
                   {% case filter.type %}
                   {% when 'boolean' or 'list' %}
-                    <details id="Details-Mobile-{{ forloop.index }}-{{ section.id }}" class="mobile-facets__details js-filter" data-index="mobile-{{ forloop.index }}">
-                      <summary class="mobile-facets__summary focus-inset">
+                    <details id="Details-Mobile-{{ forloop.index }}-{{ section.id }}" class="mobile-facets__details js-filter" data-index="mobile-{{ forloop.index }}" data-filter-label="{{ filter.label | handleize }}" open>
+                      <summary class="mobile-facets__summary mobile-facets__summary--inline focus-inset">
                         <div>
                           <span>{{ filter.label | escape }}</span>
-                          <span class="mobile-facets__arrow no-js-hidden">{% render 'icon-arrow' %}</span>
-                          <noscript>{% render 'icon-caret' %}</noscript>
+                          <span class="mobile-facets__selected-count no-js-hidden{% if filter.active_values.size == 0 %} hidden{% endif %}"> ({{ filter.active_values.size }})</span>
                         </div>
+                        <facet-remove class="mobile-facets__filter-reset-wrapper">
+                            <a href="{{ filter.url_to_remove }}" class="mobile-facets__filter-reset" onclick="event.stopPropagation()">
+                              {{ 'products.facets.reset' | t }}
+                            </a>
+                          </facet-remove>
+                        <span class="mobile-facets__caret no-js-hidden">{% render 'icon-caret' %}</span>
+                        <noscript>{% render 'icon-caret' %}</noscript>
                       </summary>
-                      <div id="FacetMobile-{{ forloop.index }}-{{ section.id }}" class="mobile-facets__submenu gradient">
-                        <button class="mobile-facets__close-button link link--text focus-inset" aria-expanded="true" type="button">
-                          {% render 'icon-arrow' %}
-                          {{ filter.label | escape }}
-                        </button>
+                      <div id="FacetMobile-{{ forloop.index }}-{{ section.id }}" class="mobile-facets__inline-content">
                         <ul class="mobile-facets__list list-unstyled" role="list">
                           {%- for value in filter.values -%}
                             <li class="mobile-facets__item list-menu__item">
@@ -484,31 +486,23 @@
                             </li>
                           {%- endfor -%}
                         </ul>
-
-                        <div class="no-js-hidden mobile-facets__footer gradient">
-                          <facet-remove class="mobile-facets__clear-wrapper">
-                            <a href="{{ results_url }}" class="mobile-facets__clear underlined-link">{{ 'products.facets.clear' | t }}</a>
-                          </facet-remove>
-                          <button type="button" class="no-js-hidden button button--primary" onclick="this.closest('.mobile-facets__wrapper').querySelector('summary').click()">{{ 'products.facets.apply' | t }}</button>
-                          <noscript><button class="button button--primary">{{ 'products.facets.apply' | t }}</button></noscript>
-                        </div>
                       </div>
                     </details>
                   {% when 'price_range' %}
-                    <details id="Details-Mobile-{{ forloop.index }}-{{ section.id }}" class="mobile-facets__details js-filter" data-index="mobile-{{ forloop.index }}">
-                      <summary class="mobile-facets__summary focus-inset">
+                    <details id="Details-Mobile-{{ forloop.index }}-{{ section.id }}" class="mobile-facets__details js-filter" data-index="mobile-{{ forloop.index }}" open>
+                      <summary class="mobile-facets__summary mobile-facets__summary--inline focus-inset">
                         <div>
                           <span>{{ filter.label | escape }}</span>
-                          <span class="mobile-facets__arrow no-js-hidden">{% render 'icon-arrow' %}</span>
-                          <noscript>{% render 'icon-caret' %}</noscript>
                         </div>
+                        <facet-remove class="mobile-facets__filter-reset-wrapper">
+                            <a href="{{ filter.url_to_remove }}" class="mobile-facets__filter-reset" onclick="event.stopPropagation()">
+                              {{ 'products.facets.reset' | t }}
+                            </a>
+                          </facet-remove>
+                        <span class="mobile-facets__caret no-js-hidden">{% render 'icon-caret' %}</span>
+                        <noscript>{% render 'icon-caret' %}</noscript>
                       </summary>
-                      <div id="FacetMobile-{{ forloop.index }}-{{ section.id }}" class="mobile-facets__submenu gradient">
-                        <button class="mobile-facets__close-button link link--text focus-inset" aria-expanded="true" type="button">
-                          {% render 'icon-arrow' %}
-                          {{ filter.label | escape }}
-                        </button>
-
+                      <div id="FacetMobile-{{ forloop.index }}-{{ section.id }}" class="mobile-facets__inline-content mobile-facets__inline-content--price">
                         {%- assign max_price_amount = filter.range_max | money | strip_html | escape -%}
                         <p class="mobile-facets__info">{{ "products.facets.max_price" | t: price: max_price_amount }}</p>
 
@@ -552,13 +546,6 @@
                             <label class="field__label" for="Mobile-Filter-{{ filter.label | escape }}-LTE">{{ 'products.facets.to' | t }}</label>
                           </div>
                         </price-range>
-                        <div class="no-js-hidden mobile-facets__footer">
-                          <facet-remove class="mobile-facets__clear-wrapper">
-                            <a href="{{ results_url }}" class="mobile-facets__clear underlined-link">{{ 'products.facets.clear' | t }}</a>
-                          </facet-remove>
-                          <button type="button" class="no-js-hidden button button--primary" onclick="this.closest('.mobile-facets__wrapper').querySelector('summary').click()">{{ 'products.facets.apply' | t }}</button>
-                          <noscript><button class="button button--primary">{{ 'products.facets.apply' | t }}</button></noscript>
-                        </div>
                       </div>
                     </details>
                   {% endcase %}
