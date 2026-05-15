@@ -3036,7 +3036,8 @@ text-decoration: none;
 .collection__products,
 .product-grid,
 #MainContent {
-  background-color: #B2819C !important;
+  /* background-color: #B2819C !important; */
+   background-color: #white !important;
 }
 
 .header__menu-item {
