@@ -785,7 +785,7 @@ details.menu-opening .mobile-facets__close svg {
 }
 
 .mobile-facets__checkbox:checked+.mobile-facets__highlight {
-  visibility: visible;
+  visibility: hidden!important;
   opacity: 1;
   position: absolute;
   top: 0px;
@@ -990,7 +990,7 @@ details.mobile-facets__details[open] .mobile-facets__caret {
 input.mobile-facets__checkbox {
   border: 0;
   position: absolute;
-  width: 1.6rem;
+  /* width: 1.6rem; */
   height: 1.6rem;
   position: absolute;
   left: 2.1rem;
