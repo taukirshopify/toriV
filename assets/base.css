@@ -3548,23 +3548,16 @@ font-size: 18px !important;
   display: none !important;
 }
 
-.footer__copyright,
-.footer__content-bottom,
-.footer__content-bottom-wrapper,
-.copyright__content {
-  text-align: center !important;
-  justify-content: center !important;
-  align-items: center !important;
-  margin-left: auto !important;
-  margin-right: auto !important;
-}
-
-.footer__content-bottom-wrapper {
-  display: flex !important;
+.footer .footer__blocks-wrapper {
   width: 100% !important;
+  margin: 0 auto !important;
+  display: flex !important;
+  justify-content: center !important;
+  gap: 90px !important;
 }
 
-.footer__content-bottom-wrapper > * {
-  margin-left: auto !important;
-  margin-right: auto !important;
+.footer .footer-block--menu {
+  width: auto !important;
+  min-width: 160px;
+  text-align: center !important;
 }
