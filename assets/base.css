@@ -3548,16 +3548,44 @@ font-size: 18px !important;
   display: none !important;
 }
 
-.footer .footer__blocks-wrapper {
-  width: 100% !important;
-  margin: 0 auto !important;
+/* CENTER THE FOOTER MENU COLUMNS: TORI V / SOCIALS / SUPPORT */
+.footer__blocks-wrapper {
   display: flex !important;
   justify-content: center !important;
-  gap: 90px !important;
+  align-items: flex-start !important;
+  width: 100% !important;
+  margin: 0 auto !important;
+  text-align: center !important;
 }
 
-.footer .footer-block--menu {
-  width: auto !important;
-  min-width: 160px;
+/* Make each footer menu column equal and centered */
+.footer-block--menu {
+  flex: 0 0 180px !important;
+  max-width: 180px !important;
+  min-width: 180px !important;
   text-align: center !important;
+}
+
+/* Center headings */
+.footer-block--menu .footer-block__heading {
+  text-align: center !important;
+  width: 100% !important;
+}
+
+/* Center menu links */
+.footer-block--menu .footer-block__details-content {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  text-align: center !important;
+  width: 100% !important;
+}
+
+/* Center the actual clickable link text */
+.footer-block--menu .list-menu__item,
+.footer-block--menu .list-menu__item--link,
+.footer-block--menu a {
+  justify-content: center !important;
+  text-align: center !important;
+  width: 100% !important;
 }
