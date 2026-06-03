@@ -340,7 +340,76 @@ document.addEventListener('click', function () {
   }, 100);
 });
 </script>
+<style>
+  .tori-footer-menu-center {
+    position: absolute !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    display: flex !important;
+    gap: 90px !important;
+    justify-content: center !important;
+    align-items: flex-start !important;
+    text-align: center !important;
+    width: auto !important;
+    z-index: 2 !important;
+  }
 
+  .tori-footer-menu-center > * {
+    width: 170px !important;
+    text-align: center !important;
+  }
+
+  .tori-footer-menu-center * {
+    text-align: center !important;
+    justify-content: center !important;
+  }
+
+  footer {
+    position: relative !important;
+  }
+
+  @media screen and (max-width: 749px) {
+    .tori-footer-menu-center {
+      position: static !important;
+      transform: none !important;
+      display: block !important;
+    }
+  }
+</style>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const footer = document.querySelector("footer");
+  if (!footer) return;
+
+  const wanted = ["TORI V", "SOCIALS", "SUPPORT"];
+  const blocks = [];
+
+  wanted.forEach(function (title) {
+    const match = Array.from(footer.querySelectorAll("*")).find(function (el) {
+      return el.textContent.trim().toUpperCase() === title;
+    });
+
+    if (match) {
+      let block = match.closest(".footer-block") || match.parentElement;
+      if (block && !blocks.includes(block)) {
+        blocks.push(block);
+      }
+    }
+  });
+
+  if (blocks.length) {
+    const wrapper = document.createElement("div");
+    wrapper.className = "tori-footer-menu-center";
+
+    blocks[0].parentNode.insertBefore(wrapper, blocks[0]);
+
+    blocks.forEach(function (block) {
+      wrapper.appendChild(block);
+    });
+  }
+});
+</script>
 </body>
 
 </html>
