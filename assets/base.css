@@ -3702,4 +3702,13 @@ a[href^="mailto:"],
   text-decoration: underline !important;
   opacity: 1 !important;
   visibility: visible !important;
+}/* Make all policy page links visible */
+.shopify-policy__body a,
+.shopify-policy__body a:visited,
+.shopify-policy__body a:hover,
+.shopify-policy__body a:active {
+  color: #000000 !important;
+  text-decoration: underline !important;
+  opacity: 1 !important;
+  visibility: visible !important;
 }
