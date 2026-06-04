@@ -3778,3 +3778,101 @@ a[href^="mailto:"],
   letter-spacing: 1px !important;
   color: #000000 !important;
 }
+/* TORI V HEADER MENU — REMOVE RED BOX + ADD GLIDE HOVER */
+
+.header a[href="/"],
+.header a[href="/collections/all"],
+.header a[href="/pages/soundboard"],
+.header a[href="/pages/sign-up"],
+header a[href="/"],
+header a[href="/collections/all"],
+header a[href="/pages/soundboard"],
+header a[href="/pages/sign-up"],
+nav a[href="/"],
+nav a[href="/collections/all"],
+nav a[href="/pages/soundboard"],
+nav a[href="/pages/sign-up"] {
+  background: transparent !important;
+  background-color: transparent !important;
+  color: #000 !important;
+  -webkit-text-fill-color: #000 !important;
+  box-shadow: none !important;
+  border: 0 !important;
+  text-decoration: none !important;
+  position: relative !important;
+  overflow: hidden !important;
+}
+
+.header a[href="/"] span,
+.header a[href="/collections/all"] span,
+.header a[href="/pages/soundboard"] span,
+.header a[href="/pages/sign-up"] span,
+header a[href="/"] span,
+header a[href="/collections/all"] span,
+header a[href="/pages/soundboard"] span,
+header a[href="/pages/sign-up"] span,
+nav a[href="/"] span,
+nav a[href="/collections/all"] span,
+nav a[href="/pages/soundboard"] span,
+nav a[href="/pages/sign-up"] span {
+  background: transparent !important;
+  background-color: transparent !important;
+  color: #000 !important;
+  -webkit-text-fill-color: #000 !important;
+  text-decoration: none !important;
+}
+
+.header a[href="/"]::after,
+.header a[href="/collections/all"]::after,
+.header a[href="/pages/soundboard"]::after,
+.header a[href="/pages/sign-up"]::after,
+header a[href="/"]::after,
+header a[href="/collections/all"]::after,
+header a[href="/pages/soundboard"]::after,
+header a[href="/pages/sign-up"]::after,
+nav a[href="/"]::after,
+nav a[href="/collections/all"]::after,
+nav a[href="/pages/soundboard"]::after,
+nav a[href="/pages/sign-up"]::after {
+  content: "" !important;
+  position: absolute !important;
+  left: 10px !important;
+  right: 10px !important;
+  bottom: 8px !important;
+  height: 2px !important;
+  background: linear-gradient(90deg, transparent, #c40000, transparent) !important;
+  transform: translateX(-140%) !important;
+  transition: transform .45s ease !important;
+  pointer-events: none !important;
+}
+
+.header a[href="/"]:hover::after,
+.header a[href="/collections/all"]:hover::after,
+.header a[href="/pages/soundboard"]:hover::after,
+.header a[href="/pages/sign-up"]:hover::after,
+header a[href="/"]:hover::after,
+header a[href="/collections/all"]:hover::after,
+header a[href="/pages/soundboard"]:hover::after,
+header a[href="/pages/sign-up"]:hover::after,
+nav a[href="/"]:hover::after,
+nav a[href="/collections/all"]:hover::after,
+nav a[href="/pages/soundboard"]:hover::after,
+nav a[href="/pages/sign-up"]:hover::after {
+  transform: translateX(140%) !important;
+}
+
+.header a[href="/"]:hover,
+.header a[href="/collections/all"]:hover,
+.header a[href="/pages/soundboard"]:hover,
+.header a[href="/pages/sign-up"]:hover,
+header a[href="/"]:hover,
+header a[href="/collections/all"]:hover,
+header a[href="/pages/soundboard"]:hover,
+header a[href="/pages/sign-up"]:hover,
+nav a[href="/"]:hover,
+nav a[href="/collections/all"]:hover,
+nav a[href="/pages/soundboard"]:hover,
+nav a[href="/pages/sign-up"]:hover {
+  color: #c40000 !important;
+  -webkit-text-fill-color: #c40000 !important;
+}
