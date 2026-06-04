@@ -3734,4 +3734,7 @@ a[href^="mailto:"],
   text-align: left !important;
   line-height: 1.1 !important;
   margin-bottom: 36px !important;
+}/* Make Privacy Policy main title black */
+.shopify-policy__title h1 {
+  color: #000000 !important;
 }
