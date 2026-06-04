@@ -3684,31 +3684,13 @@ main *,
 .video-section,
 .video-section * {
   pointer-events: none !important;
-}/* Make highlighted/selected text visible */
+}/* Normal-looking text highlight */
 ::selection {
-  background: #510F0F !important;
-  color: #ffffff !important;
+  background: Highlight !important;
+  color: HighlightText !important;
 }
 
 ::-moz-selection {
-  background: #510F0F !important;
-  color: #ffffff !important;
-}
-
-body ::selection,
-main ::selection,
-.rte ::selection,
-.shopify-policy__container ::selection,
-.shopify-policy__body ::selection {
-  background: #510F0F !important;
-  color: #ffffff !important;
-}
-
-body ::-moz-selection,
-main ::-moz-selection,
-.rte ::-moz-selection,
-.shopify-policy__container ::-moz-selection,
-.shopify-policy__body ::-moz-selection {
-  background: #510F0F !important;
-  color: #ffffff !important;
+  background: Highlight !important;
+  color: HighlightText !important;
 }
