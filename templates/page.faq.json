@@ -17,21 +17,6 @@
         "padding_bottom": 28
       }
     },
-    "0aba942e-ac3d-41b7-83c5-be507f6ffec7": {
-      "type": "image-banner",
-      "settings": {
-        "image_overlay_opacity": 0,
-        "image_height": "medium",
-        "adapt_height_first_image": true,
-        "desktop_content_position": "middle-center",
-        "show_text_box": false,
-        "desktop_content_alignment": "center",
-        "color_scheme": "background-1",
-        "mobile_content_alignment": "center",
-        "stack_images_on_mobile": true,
-        "show_text_below": true
-      }
-    },
     "fd0cfcac-0f49-4965-a3c4-2f371bb04b6b": {
       "type": "newsletter",
       "blocks": {
@@ -70,8 +55,7 @@
   },
   "order": [
     "main",
-    "0aba942e-ac3d-41b7-83c5-be507f6ffec7",
-    "fd0cfcac-0f49-4965-a3c4-2f371bb04b6b",
-    "custom_liquid_EFDHpN"
+    "custom_liquid_EFDHpN",
+    "fd0cfcac-0f49-4965-a3c4-2f371bb04b6b"
   ]
 }
