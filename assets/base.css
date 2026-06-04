@@ -3830,10 +3830,16 @@ content:none!important;
 .header__inline-menu a span,
 .header__inline-menu .header__menu-item,
 .header__inline-menu .header__menu-item span{
-color:#000!important;
--webkit-text-fill-color:#000!important;
-text-decoration:none!important;
-}
+  .header__inline-menu li:hover a,
+  .header__inline-menu li:hover a span,
+  .header__inline-menu li:hover .header__menu-item,
+  .header__inline-menu li:hover .header__menu-item span{
+  color:#c40000!important;
+  -webkit-text-fill-color:#c40000!important;
+  text-decoration:underline!important;
+  text-underline-offset:4px!important;
+  text-decoration-thickness:1px!important;
+  }
 
 .header__inline-menu li:hover a,
 .header__inline-menu li:hover a span,
@@ -3844,4 +3850,40 @@ color:#c40000!important;
 text-decoration:underline!important;
 text-underline-offset:4px!important;
 text-decoration-thickness:1px!important;
+}
+/* ORDER SUPPORT PAGE - ALIGN WITH HELP PAGE TEXT COLUMN */
+body:has(a[href="/pages/help-center"]) .shopify-section:has(.tv-order-support-page),
+body:has(.tv-order-support-page) {
+  --tv-help-left-offset: 52.5%;
+}
+
+.tv-order-support-page {
+  width: 100%;
+  max-width: 1540px;
+  margin: 0 auto;
+  padding: 0 36px 80px;
+  box-sizing: border-box;
+}
+
+.tv-order-support-inner {
+  width: 100%;
+  max-width: 680px;
+  margin-left: 52.5%;
+  transform: translateX(-1px);
+}
+
+.tv-order-support-inner h1 {
+  margin-top: 0;
+}
+
+@media screen and (max-width: 989px) {
+  .tv-order-support-page {
+    padding: 32px 22px 60px;
+  }
+
+  .tv-order-support-inner {
+    max-width: 100%;
+    margin-left: 0;
+    transform: none;
+  }
 }
