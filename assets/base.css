@@ -3807,4 +3807,41 @@ a[href^="mailto:"],
   text-decoration:underline!important;
   text-underline-offset:4px!important;
   text-decoration-thickness:1px!important;
+}/* FINAL HEADER MENU FIX */
+.header__inline-menu,
+.header__inline-menu *,
+.header__inline-menu *:hover,
+.header__inline-menu *:focus,
+.header__inline-menu *:active,
+.header__inline-menu *[aria-current="page"]{
+background:transparent!important;
+background-color:transparent!important;
+box-shadow:none!important;
+border-color:transparent!important;
+}
+
+.header__inline-menu *:before,
+.header__inline-menu *:after{
+display:none!important;
+content:none!important;
+}
+
+.header__inline-menu a,
+.header__inline-menu a span,
+.header__inline-menu .header__menu-item,
+.header__inline-menu .header__menu-item span{
+color:#000!important;
+-webkit-text-fill-color:#000!important;
+text-decoration:none!important;
+}
+
+.header__inline-menu li:hover a,
+.header__inline-menu li:hover a span,
+.header__inline-menu li:hover .header__menu-item,
+.header__inline-menu li:hover .header__menu-item span{
+color:#c40000!important;
+-webkit-text-fill-color:#c40000!important;
+text-decoration:underline!important;
+text-underline-offset:4px!important;
+text-decoration-thickness:1px!important;
 }
