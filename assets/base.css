@@ -3688,3 +3688,50 @@ a[href^="mailto:"],
   opacity: 1 !important;
   visibility: visible !important;
 }
+/* Privacy policy spacing cleanup */
+.shopify-policy__container {
+  max-width: 900px !important;
+  margin: 80px auto !important;
+  padding: 0 24px !important;
+}
+
+/* Main body text spacing */
+.shopify-policy__body,
+.shopify-policy__body p,
+.shopify-policy__body li {
+  line-height: 1.35 !important;
+}
+
+/* Paragraph spacing */
+.shopify-policy__body p {
+  margin-top: 0 !important;
+  margin-bottom: 14px !important;
+}
+
+/* Bullet spacing */
+.shopify-policy__body ul,
+.shopify-policy__body ol {
+  margin-top: 8px !important;
+  margin-bottom: 18px !important;
+  padding-left: 28px !important;
+}
+
+.shopify-policy__body li {
+  margin-bottom: 6px !important;
+}
+
+/* Heading spacing */
+.shopify-policy__body h1,
+.shopify-policy__body h2,
+.shopify-policy__body h3 {
+  margin-top: 36px !important;
+  margin-bottom: 12px !important;
+  line-height: 1.15 !important;
+}
+
+/* Main red title */
+.shopify-policy__title h1 {
+  text-align: left !important;
+  line-height: 1.1 !important;
+  margin-bottom: 36px !important;
+}
