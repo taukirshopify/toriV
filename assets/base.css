@@ -3778,3 +3778,50 @@ a[href^="mailto:"],
   letter-spacing: 1px !important;
   color: #000000 !important;
 }
+/* HEADER MENU GLIDE HOVER EFFECT */
+
+.header__inline-menu .list-menu__item,
+.header__menu-item,
+.header__active-menu-item {
+  background: transparent !important;
+  color: #000 !important;
+  text-decoration: none !important;
+  position: relative !important;
+  overflow: hidden !important;
+  transition: color .25s ease !important;
+}
+
+.header__inline-menu .list-menu__item span,
+.header__menu-item span,
+.header__active-menu-item {
+  background: transparent !important;
+  text-decoration: none !important;
+}
+
+.header__inline-menu .list-menu__item::after,
+.header__menu-item::after {
+  content: "" !important;
+  position: absolute !important;
+  left: 14px !important;
+  right: 14px !important;
+  bottom: 10px !important;
+  height: 2px !important;
+  background: linear-gradient(90deg, transparent, #c40000, transparent) !important;
+  transform: translateX(-120%) !important;
+  transition: transform .45s ease !important;
+}
+
+.header__inline-menu .list-menu__item:hover::after,
+.header__menu-item:hover::after {
+  transform: translateX(120%) !important;
+}
+
+.header__inline-menu .list-menu__item:hover,
+.header__menu-item:hover {
+  color: #c40000 !important;
+}
+
+.header__active-menu-item {
+  color: #000 !important;
+  font-weight: inherit !important;
+}
