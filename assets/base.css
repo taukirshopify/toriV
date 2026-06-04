@@ -3659,3 +3659,29 @@ font-size: 18px !important;
   color: #510F0F;
   text-decoration: underline;
 }
+/* Fix invisible background overlay blocking main page text selection */
+main,
+main *,
+#MainContent,
+#MainContent * {
+  position: relative;
+}
+
+#MainContent {
+  z-index: 2;
+}
+
+.video-background,
+.video-background *,
+.videoBackground,
+.videoBackground *,
+.video-background-wrapper,
+.video-background-wrapper *,
+.videoBackground-wrapper,
+.videoBackground-wrapper *,
+.background-video,
+.background-video *,
+.video-section,
+.video-section * {
+  pointer-events: none !important;
+}
