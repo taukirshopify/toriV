@@ -3659,3 +3659,16 @@ font-size: 18px !important;
   color: #510F0F;
   text-decoration: underline;
 }
+/* Allow text highlighting/selection on policy pages */
+.shopify-policy__container,
+.shopify-policy__container *,
+.shopify-policy__body,
+.shopify-policy__body *,
+.shopify-policy__title,
+.shopify-policy__title * {
+  -webkit-user-select: text !important;
+  -moz-user-select: text !important;
+  -ms-user-select: text !important;
+  user-select: text !important;
+  pointer-events: auto !important;
+}
