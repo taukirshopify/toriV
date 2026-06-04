@@ -3620,7 +3620,9 @@ font-size: 18px !important;
   letter-spacing: 1px;
   text-transform: uppercase;
   color: #510F0F;
-  text-align: center;
+  .shopify-policy__title h1 {
+  text-align: left !important;
+}
   margin-bottom: 45px;
 }
 
