@@ -933,3 +933,196 @@
 }
 
 </style>
+<style>
+.tori-footer-signup {
+  max-width: 380px;
+  color: #fff;
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+.tori-footer-signup h2 {
+  margin: 0 0 14px;
+  color: #fff;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 13px;
+  line-height: 1.2;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+.tori-footer-signup p {
+  margin: 0 0 14px;
+  color: rgba(255,255,255,.85);
+  font-size: 11px;
+  line-height: 1.35;
+}
+
+.tori-footer-form {
+  width: 100%;
+}
+
+.tori-footer-input,
+.tori-footer-select {
+  width: 100%;
+  height: 42px;
+  margin-bottom: 10px;
+  padding: 0 13px;
+  border: 1px solid rgba(255,255,255,.55);
+  background: transparent;
+  color: #fff;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 12px;
+  box-sizing: border-box;
+  border-radius: 0;
+}
+
+.tori-footer-input::placeholder {
+  color: rgba(255,255,255,.65);
+  text-transform: uppercase;
+}
+
+.tori-footer-select {
+  color: rgba(255,255,255,.75);
+}
+
+.tori-footer-select option {
+  color: #000;
+}
+
+.tori-footer-button {
+  width: 100%;
+  height: 46px;
+  margin-top: 3px;
+  border: 1.5px solid #fff;
+  background: transparent;
+  color: #fff;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  border-radius: 999px;
+  cursor: pointer;
+}
+
+.tori-footer-button:hover {
+  background: #fff;
+  color: #000;
+}
+
+.tori-footer-legal {
+  margin-top: 16px;
+  color: rgba(255,255,255,.72);
+  font-size: 10px;
+  line-height: 1.35;
+  text-align: center;
+}
+
+.tori-footer-legal em {
+  font-style: italic;
+}
+
+.tori-footer-legal a {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.tori-footer-message {
+  margin-top: 10px;
+  color: #fff;
+  font-size: 11px;
+  font-weight: 700;
+}
+</style>
+
+<div class="tori-footer-signup">
+  <h2>Sign up for official Tori V updates</h2>
+
+  <p>Get new music, merch drops, live show announcements, and exclusive updates from Tori V.</p>
+
+  {% form 'customer', class: 'tori-footer-form' %}
+    <input type="hidden" name="contact[tags]" value="newsletter, tori v updates">
+
+    <input
+      class="tori-footer-input"
+      type="email"
+      name="contact[email]"
+      placeholder="Your email"
+      required
+    >
+
+    <select class="tori-footer-select" name="contact[note]">
+      <option value="">Select your state</option>
+      <option value="Alabama">Alabama</option>
+      <option value="Alaska">Alaska</option>
+      <option value="Arizona">Arizona</option>
+      <option value="Arkansas">Arkansas</option>
+      <option value="California">California</option>
+      <option value="Colorado">Colorado</option>
+      <option value="Connecticut">Connecticut</option>
+      <option value="Delaware">Delaware</option>
+      <option value="Florida">Florida</option>
+      <option value="Georgia">Georgia</option>
+      <option value="Hawaii">Hawaii</option>
+      <option value="Idaho">Idaho</option>
+      <option value="Illinois">Illinois</option>
+      <option value="Indiana">Indiana</option>
+      <option value="Iowa">Iowa</option>
+      <option value="Kansas">Kansas</option>
+      <option value="Kentucky">Kentucky</option>
+      <option value="Louisiana">Louisiana</option>
+      <option value="Maine">Maine</option>
+      <option value="Maryland">Maryland</option>
+      <option value="Massachusetts">Massachusetts</option>
+      <option value="Michigan">Michigan</option>
+      <option value="Minnesota">Minnesota</option>
+      <option value="Mississippi">Mississippi</option>
+      <option value="Missouri">Missouri</option>
+      <option value="Montana">Montana</option>
+      <option value="Nebraska">Nebraska</option>
+      <option value="Nevada">Nevada</option>
+      <option value="New Hampshire">New Hampshire</option>
+      <option value="New Jersey">New Jersey</option>
+      <option value="New Mexico">New Mexico</option>
+      <option value="New York">New York</option>
+      <option value="North Carolina">North Carolina</option>
+      <option value="North Dakota">North Dakota</option>
+      <option value="Ohio">Ohio</option>
+      <option value="Oklahoma">Oklahoma</option>
+      <option value="Oregon">Oregon</option>
+      <option value="Pennsylvania">Pennsylvania</option>
+      <option value="Rhode Island">Rhode Island</option>
+      <option value="South Carolina">South Carolina</option>
+      <option value="South Dakota">South Dakota</option>
+      <option value="Tennessee">Tennessee</option>
+      <option value="Texas">Texas</option>
+      <option value="Utah">Utah</option>
+      <option value="Vermont">Vermont</option>
+      <option value="Virginia">Virginia</option>
+      <option value="Washington">Washington</option>
+      <option value="West Virginia">West Virginia</option>
+      <option value="Wisconsin">Wisconsin</option>
+      <option value="Wyoming">Wyoming</option>
+      <option value="Outside the United States">Outside the United States</option>
+    </select>
+
+    <button class="tori-footer-button" type="submit">Sign up now</button>
+
+    {% if form.posted_successfully? %}
+      <div class="tori-footer-message">Thank you for signing up.</div>
+    {% endif %}
+
+    {% if form.errors %}
+      <div class="tori-footer-message">Please check your email address and try again.</div>
+    {% endif %}
+  {% endform %}
+
+  <div class="tori-footer-legal">
+    <em>
+      Emails are sent on behalf of Tori V Studios LLC. You can unsubscribe at any time.
+      By signing up, you agree to receive email updates. See our
+      <a href="/policies/privacy-policy">Privacy Policy</a>.
+    </em>
+  </div>
+</div>
