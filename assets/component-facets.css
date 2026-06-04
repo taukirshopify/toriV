@@ -860,7 +860,7 @@ details.mobile-facets__details[open] .mobile-facets__inline-content {
   padding: 1.4rem 2.5rem;
   border-bottom: 0.1rem solid rgba(var(--color-foreground), 0.08);
   cursor: pointer;
-  user-select: none;
+  : none;
   list-style: none;
 }
 
