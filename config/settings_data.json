@@ -152,10 +152,7 @@
       },
       "header": {
         "type": "header",
-        "custom_css": [
-          ".header__inline-menu li a,.header__inline-menu li span{background:0!important;box-shadow:none!important;border:0!important;color:#000!important;text-decoration:none!important}",
-          ".header__inline-menu li a:hover,.header__inline-menu li a:hover span{color:#c40000!important;text-decoration:underline!important;text-underline-offset:4px!important}"
-        ],
+        "custom_css": [],
         "settings": {
           "color_scheme": "accent-1",
           "logo": "shopify://shop_images/kling_20260513__Create_a_s_3284_0-ezgif.com-crop.gif",
