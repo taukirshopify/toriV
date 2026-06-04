@@ -3741,4 +3741,9 @@ a[href^="mailto:"],
 .shopify-policy__container,
 .shopify-policy__container * {
   font-family: Arial, sans-serif !important;
+}/* Make Privacy Policy text column narrower */
+.shopify-policy__container {
+  max-width: 650px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
 }
