@@ -3830,16 +3830,10 @@ content:none!important;
 .header__inline-menu a span,
 .header__inline-menu .header__menu-item,
 .header__inline-menu .header__menu-item span{
-  .header__inline-menu li:hover a,
-  .header__inline-menu li:hover a span,
-  .header__inline-menu li:hover .header__menu-item,
-  .header__inline-menu li:hover .header__menu-item span{
-  color:#c40000!important;
-  -webkit-text-fill-color:#c40000!important;
-  text-decoration:underline!important;
-  text-underline-offset:4px!important;
-  text-decoration-thickness:1px!important;
-  }
+color:#000!important;
+-webkit-text-fill-color:#000!important;
+text-decoration:none!important;
+}
 
 .header__inline-menu li:hover a,
 .header__inline-menu li:hover a span,
