@@ -3771,3 +3771,10 @@ a[href^="mailto:"],
 .shopify-policy__title h1 {
   font-size: 42px !important;
 }
+/* Make the main Privacy Policy title super bold */
+.shopify-policy__title h1 {
+  font-weight: 600 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 1px !important;
+  color: #000000 !important;
+}
