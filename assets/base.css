@@ -3746,4 +3746,28 @@ a[href^="mailto:"],
   max-width: 650px !important;
   margin-left: auto !important;
   margin-right: auto !important;
+}/* Make Privacy Policy body text smaller, not the main title */
+.shopify-policy__body,
+.shopify-policy__body p,
+.shopify-policy__body li {
+  font-size: 14px !important;
+  line-height: 1.35 !important;
+}
+
+/* Smaller section headings inside the policy body */
+.shopify-policy__body h1 {
+  font-size: 24px !important;
+}
+
+.shopify-policy__body h2 {
+  font-size: 20px !important;
+}
+
+.shopify-policy__body h3 {
+  font-size: 17px !important;
+}
+
+/* Do NOT shrink the big top Privacy Policy title */
+.shopify-policy__title h1 {
+  font-size: 42px !important;
 }
