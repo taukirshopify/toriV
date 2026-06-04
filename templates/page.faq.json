@@ -27,35 +27,20 @@
         "padding_bottom": 0
       }
     },
-    "fd0cfcac-0f49-4965-a3c4-2f371bb04b6b": {
-      "type": "newsletter",
-      "blocks": {
-        "template--17827631956275__fd0cfcac-0f49-4965-a3c4-2f371bb04b6b-167509384330fd7b24-1": {
-          "type": "paragraph",
-          "settings": {
-            "text": "<p>Be the first to know about new collections and exclusive offers.</p>"
-          }
-        },
-        "template--17827631956275__fd0cfcac-0f49-4965-a3c4-2f371bb04b6b-167509384330fd7b24-2": {
-          "type": "email_form",
-          "settings": {}
-        }
-      },
-      "block_order": [
-        "template--17827631956275__fd0cfcac-0f49-4965-a3c4-2f371bb04b6b-167509384330fd7b24-1",
-        "template--17827631956275__fd0cfcac-0f49-4965-a3c4-2f371bb04b6b-167509384330fd7b24-2"
-      ],
+    "custom_liquid_jpmhnQ": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
       "settings": {
-        "color_scheme": "accent-1",
-        "full_width": true,
+        "custom_liquid": "<style>\n.tori-signup-section {\n  width: 100%;\n  background: #c90000;\n  padding: 54px 20px 52px;\n  color: #fff;\n  text-align: center;\n  box-sizing: border-box;\n}\n\n.tori-signup-inner {\n  max-width: 720px;\n  margin: 0 auto;\n}\n\n.tori-signup-title {\n  margin: 0 0 18px;\n  font-family: Helvetica, Arial, sans-serif;\n  font-size: 22px;\n  line-height: 1.15;\n  font-weight: 800;\n  letter-spacing: 0.5px;\n  text-transform: uppercase;\n  color: #fff;\n}\n\n.tori-signup-subtext {\n  margin: 0 auto 26px;\n  max-width: 620px;\n  font-family: Helvetica, Arial, sans-serif;\n  font-size: 14px;\n  line-height: 1.32;\n  font-weight: 700;\n  color: #fff;\n}\n\n.tori-signup-form {\n  max-width: 560px;\n  margin: 0 auto;\n}\n\n.tori-signup-field,\n.tori-signup-select {\n  width: 100%;\n  height: 54px;\n  margin-bottom: 13px;\n  padding: 0 16px;\n  border: 1px solid rgba(255,255,255,0.85);\n  background: #fff;\n  color: #000;\n  font-family: Helvetica, Arial, sans-serif;\n  font-size: 15px;\n  font-weight: 500;\n  box-sizing: border-box;\n  border-radius: 0;\n}\n\n.tori-signup-field::placeholder {\n  color: #777;\n}\n\n.tori-signup-select {\n  appearance: auto;\n}\n\n.tori-signup-button {\n  width: 100%;\n  height: 58px;\n  margin-top: 4px;\n  border: 2px solid #fff;\n  background: transparent;\n  color: #fff;\n  font-family: Helvetica, Arial, sans-serif;\n  font-size: 16px;\n  line-height: 1;\n  font-weight: 800;\n  letter-spacing: 1px;\n  text-transform: uppercase;\n  cursor: pointer;\n  border-radius: 999px;\n  transition: background 0.2s ease, color 0.2s ease, transform 0.2s ease;\n}\n\n.tori-signup-button:hover {\n  background: #fff;\n  color: #c90000;\n  transform: translateY(-1px);\n}\n\n.tori-signup-legal {\n  max-width: 650px;\n  margin: 22px auto 0;\n  font-family: Helvetica, Arial, sans-serif;\n  font-size: 11.5px;\n  line-height: 1.35;\n  font-weight: 500;\n  color: rgba(255,255,255,0.92);\n}\n\n.tori-signup-legal em {\n  font-style: italic;\n}\n\n.tori-signup-legal a {\n  color: #fff;\n  text-decoration: underline;\n  font-weight: 700;\n}\n\n.tori-signup-message {\n  margin: 12px 0 0;\n  font-family: Helvetica, Arial, sans-serif;\n  font-size: 13px;\n  line-height: 1.35;\n  font-weight: 700;\n  color: #fff;\n}\n\n@media screen and (max-width: 750px) {\n  .tori-signup-section {\n    padding: 42px 18px 44px;\n  }\n\n  .tori-signup-title {\n    font-size: 19px;\n  }\n\n  .tori-signup-subtext {\n    font-size: 13px;\n  }\n\n  .tori-signup-field,\n  .tori-signup-select {\n    height: 52px;\n    font-size: 14px;\n  }\n\n  .tori-signup-button {\n    height: 56px;\n    font-size: 15px;\n  }\n}\n</style>\n\n<div class=\"tori-signup-section\">\n  <div class=\"tori-signup-inner\">\n\n    <h2 class=\"tori-signup-title\">Sign up for official Tori V updates</h2>\n\n    <p class=\"tori-signup-subtext\">\n      Get new music, merch drops, live show announcements, and exclusive updates from Tori V.\n    </p>\n\n    {% form 'customer', class: 'tori-signup-form' %}\n      <input type=\"hidden\" name=\"contact[tags]\" value=\"newsletter, tori v updates\">\n\n      <input\n        class=\"tori-signup-field\"\n        type=\"email\"\n        name=\"contact[email]\"\n        placeholder=\"Email address\"\n        required\n      >\n\n      <select class=\"tori-signup-select\" name=\"contact[note]\">\n        <option value=\"\">Select your state</option>\n        <option value=\"Alabama\">Alabama</option>\n        <option value=\"Alaska\">Alaska</option>\n        <option value=\"Arizona\">Arizona</option>\n        <option value=\"Arkansas\">Arkansas</option>\n        <option value=\"California\">California</option>\n        <option value=\"Colorado\">Colorado</option>\n        <option value=\"Connecticut\">Connecticut</option>\n        <option value=\"Delaware\">Delaware</option>\n        <option value=\"Florida\">Florida</option>\n        <option value=\"Georgia\">Georgia</option>\n        <option value=\"Hawaii\">Hawaii</option>\n        <option value=\"Idaho\">Idaho</option>\n        <option value=\"Illinois\">Illinois</option>\n        <option value=\"Indiana\">Indiana</option>\n        <option value=\"Iowa\">Iowa</option>\n        <option value=\"Kansas\">Kansas</option>\n        <option value=\"Kentucky\">Kentucky</option>\n        <option value=\"Louisiana\">Louisiana</option>\n        <option value=\"Maine\">Maine</option>\n        <option value=\"Maryland\">Maryland</option>\n        <option value=\"Massachusetts\">Massachusetts</option>\n        <option value=\"Michigan\">Michigan</option>\n        <option value=\"Minnesota\">Minnesota</option>\n        <option value=\"Mississippi\">Mississippi</option>\n        <option value=\"Missouri\">Missouri</option>\n        <option value=\"Montana\">Montana</option>\n        <option value=\"Nebraska\">Nebraska</option>\n        <option value=\"Nevada\">Nevada</option>\n        <option value=\"New Hampshire\">New Hampshire</option>\n        <option value=\"New Jersey\">New Jersey</option>\n        <option value=\"New Mexico\">New Mexico</option>\n        <option value=\"New York\">New York</option>\n        <option value=\"North Carolina\">North Carolina</option>\n        <option value=\"North Dakota\">North Dakota</option>\n        <option value=\"Ohio\">Ohio</option>\n        <option value=\"Oklahoma\">Oklahoma</option>\n        <option value=\"Oregon\">Oregon</option>\n        <option value=\"Pennsylvania\">Pennsylvania</option>\n        <option value=\"Rhode Island\">Rhode Island</option>\n        <option value=\"South Carolina\">South Carolina</option>\n        <option value=\"South Dakota\">South Dakota</option>\n        <option value=\"Tennessee\">Tennessee</option>\n        <option value=\"Texas\">Texas</option>\n        <option value=\"Utah\">Utah</option>\n        <option value=\"Vermont\">Vermont</option>\n        <option value=\"Virginia\">Virginia</option>\n        <option value=\"Washington\">Washington</option>\n        <option value=\"West Virginia\">West Virginia</option>\n        <option value=\"Wisconsin\">Wisconsin</option>\n        <option value=\"Wyoming\">Wyoming</option>\n        <option value=\"Outside the United States\">Outside the United States</option>\n      </select>\n\n      <button class=\"tori-signup-button\" type=\"submit\">Sign up now</button>\n\n      {% if form.posted_successfully? %}\n        <p class=\"tori-signup-message\">Thank you for signing up.</p>\n      {% endif %}\n\n      {% if form.errors %}\n        <p class=\"tori-signup-message\">Please check your email address and try again.</p>\n      {% endif %}\n    {% endform %}\n\n    <p class=\"tori-signup-legal\">\n      <em>Emails are sent on behalf of Tori V Studios LLC. You can unsubscribe at any time.\n      By signing up, you agree to receive email updates. See our\n      <a href=\"/policies/privacy-policy\">Privacy Policy</a>.</em>\n    </p>\n\n  </div>\n</div>",
+        "color_scheme": "background-1",
         "padding_top": 40,
-        "padding_bottom": 36
+        "padding_bottom": 52
       }
     }
   },
   "order": [
     "main",
     "custom_liquid_EFDHpN",
-    "fd0cfcac-0f49-4965-a3c4-2f371bb04b6b"
+    "custom_liquid_jpmhnQ"
   ]
 }
