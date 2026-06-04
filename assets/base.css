@@ -3824,4 +3824,12 @@ a[href^="mailto:"],
 .header__active-menu-item {
   color: #000 !important;
   font-weight: inherit !important;
+}/* REMOVE RED ACTIVE MENU BOX */
+.header__menu-item[aria-current="page"],
+.header__active-menu-item,
+summary.header__menu-item,
+.header__inline-menu a[aria-current="page"] {
+  background: transparent !important;
+  box-shadow: none !important;
+  border: 0 !important;
 }
