@@ -35,260 +35,7 @@
     }
   }
 {%- endstyle -%}
-<style>
-  .footer-block--newsletter {
-    max-width: 390px !important;
-  }
 
-  .footer-block--newsletter h2,
-  .footer-block--newsletter .footer-block__heading,
-  .footer-block--newsletter .newsletter-form__field-wrapper + h2 {
-    font-family: Helvetica, Arial, sans-serif !important;
-    font-size: 13px !important;
-    line-height: 1.2 !important;
-    font-weight: 900 !important;
-    letter-spacing: 1.4px !important;
-    text-transform: uppercase !important;
-    color: #fff !important;
-    margin-bottom: 14px !important;
-  }
-
-  .tori-footer-newsletter-title {
-    font-family: Helvetica, Arial, sans-serif !important;
-    font-size: 13px !important;
-    line-height: 1.2 !important;
-    font-weight: 900 !important;
-    letter-spacing: 1.4px !important;
-    text-transform: uppercase !important;
-    color: #fff !important;
-    margin: 0 0 14px !important;
-  }
-
-  .tori-footer-newsletter-copy {
-    font-family: Helvetica, Arial, sans-serif !important;
-    font-size: 11px !important;
-    line-height: 1.35 !important;
-    font-weight: 500 !important;
-    color: rgba(255,255,255,.82) !important;
-    margin: 0 0 13px !important;
-    max-width: 360px !important;
-  }
-
-  .footer-block--newsletter input[type="email"],
-  .footer-block--newsletter .field__input {
-    height: 42px !important;
-    min-height: 42px !important;
-    border: 1px solid rgba(255,255,255,.55) !important;
-    background: transparent !important;
-    color: #fff !important;
-    -webkit-text-fill-color: #fff !important;
-    font-family: Helvetica, Arial, sans-serif !important;
-    font-size: 12px !important;
-    letter-spacing: 0 !important;
-    padding: 0 13px !important;
-    border-radius: 0 !important;
-  }
-
-  .footer-block--newsletter input[type="email"]::placeholder,
-  .footer-block--newsletter .field__input::placeholder {
-    color: rgba(255,255,255,.65) !important;
-    -webkit-text-fill-color: rgba(255,255,255,.65) !important;
-    text-transform: uppercase !important;
-  }
-
-  .tori-footer-state-select {
-    width: 100% !important;
-    height: 42px !important;
-    margin: 10px 0 10px !important;
-    padding: 0 13px !important;
-    border: 1px solid rgba(255,255,255,.55) !important;
-    background: #000 !important;
-    color: rgba(255,255,255,.85) !important;
-    font-family: Helvetica, Arial, sans-serif !important;
-    font-size: 12px !important;
-    border-radius: 0 !important;
-    box-sizing: border-box !important;
-  }
-
-  .tori-footer-state-select option {
-    color: #000 !important;
-    background: #fff !important;
-  }
-
-  .footer-block--newsletter button,
-  .footer-block--newsletter .newsletter-form__button {
-    width: 100% !important;
-    height: 46px !important;
-    min-height: 46px !important;
-    margin-top: 3px !important;
-    border: 1.5px solid #fff !important;
-    background: transparent !important;
-    color: #fff !important;
-    -webkit-text-fill-color: #fff !important;
-    font-family: Helvetica, Arial, sans-serif !important;
-    font-size: 12px !important;
-    font-weight: 900 !important;
-    letter-spacing: 1px !important;
-    text-transform: uppercase !important;
-    border-radius: 999px !important;
-    cursor: pointer !important;
-    display: flex !important;
-    justify-content: center !important;
-    align-items: center !important;
-  }
-
-  .footer-block--newsletter button:hover,
-  .footer-block--newsletter .newsletter-form__button:hover {
-    background: #fff !important;
-    color: #000 !important;
-    -webkit-text-fill-color: #000 !important;
-  }
-
-  .footer-block--newsletter button svg,
-  .footer-block--newsletter .newsletter-form__button svg {
-    display: none !important;
-  }
-
-  .footer-block--newsletter button::after,
-  .footer-block--newsletter .newsletter-form__button::after {
-    content: "SIGN UP NOW" !important;
-    font-family: Helvetica, Arial, sans-serif !important;
-  }
-
-  .tori-footer-legal {
-    margin-top: 15px !important;
-    color: rgba(255,255,255,.72) !important;
-    font-family: Helvetica, Arial, sans-serif !important;
-    font-size: 10px !important;
-    line-height: 1.35 !important;
-    text-align: center !important;
-    max-width: 360px !important;
-  }
-
-  .tori-footer-legal em {
-    font-style: italic !important;
-  }
-
-  .tori-footer-legal a {
-    color: #fff !important;
-    -webkit-text-fill-color: #fff !important;
-    text-decoration: underline !important;
-    font-weight: 700 !important;
-  }
-</style>
-
-<script>
-  document.addEventListener('DOMContentLoaded', function () {
-    var footerNewsletter = document.querySelector('.footer-block--newsletter');
-    if (!footerNewsletter || footerNewsletter.dataset.toriFooterUpdated === 'true') return;
-
-    footerNewsletter.dataset.toriFooterUpdated = 'true';
-
-    var existingHeading = footerNewsletter.querySelector('h2, .footer-block__heading');
-    if (existingHeading) {
-      existingHeading.innerHTML = 'Sign up for official Tori V updates';
-    } else {
-      var title = document.createElement('h2');
-      title.className = 'tori-footer-newsletter-title';
-      title.innerHTML = 'Sign up for official Tori V updates';
-      footerNewsletter.prepend(title);
-    }
-
-    var existingText = footerNewsletter.querySelector('p');
-    if (existingText) {
-      existingText.innerHTML = 'Get new music, merch drops, live show announcements, and exclusive updates from Tori V.';
-      existingText.classList.add('tori-footer-newsletter-copy');
-    } else {
-      var copy = document.createElement('p');
-      copy.className = 'tori-footer-newsletter-copy';
-      copy.innerHTML = 'Get new music, merch drops, live show announcements, and exclusive updates from Tori V.';
-      var headingNow = footerNewsletter.querySelector('h2, .footer-block__heading, .tori-footer-newsletter-title');
-      if (headingNow) {
-        headingNow.insertAdjacentElement('afterend', copy);
-      }
-    }
-
-    var emailInput = footerNewsletter.querySelector('input[type="email"]');
-    if (emailInput) {
-      emailInput.placeholder = 'YOUR EMAIL';
-    }
-
-    var form = footerNewsletter.querySelector('form');
-    if (form && !footerNewsletter.querySelector('.tori-footer-state-select')) {
-      var stateSelect = document.createElement('select');
-      stateSelect.className = 'tori-footer-state-select';
-      stateSelect.name = 'contact[note]';
-      stateSelect.innerHTML = `
-        <option value="">Select your state</option>
-        <option value="Alabama">Alabama</option>
-        <option value="Alaska">Alaska</option>
-        <option value="Arizona">Arizona</option>
-        <option value="Arkansas">Arkansas</option>
-        <option value="California">California</option>
-        <option value="Colorado">Colorado</option>
-        <option value="Connecticut">Connecticut</option>
-        <option value="Delaware">Delaware</option>
-        <option value="Florida">Florida</option>
-        <option value="Georgia">Georgia</option>
-        <option value="Hawaii">Hawaii</option>
-        <option value="Idaho">Idaho</option>
-        <option value="Illinois">Illinois</option>
-        <option value="Indiana">Indiana</option>
-        <option value="Iowa">Iowa</option>
-        <option value="Kansas">Kansas</option>
-        <option value="Kentucky">Kentucky</option>
-        <option value="Louisiana">Louisiana</option>
-        <option value="Maine">Maine</option>
-        <option value="Maryland">Maryland</option>
-        <option value="Massachusetts">Massachusetts</option>
-        <option value="Michigan">Michigan</option>
-        <option value="Minnesota">Minnesota</option>
-        <option value="Mississippi">Mississippi</option>
-        <option value="Missouri">Missouri</option>
-        <option value="Montana">Montana</option>
-        <option value="Nebraska">Nebraska</option>
-        <option value="Nevada">Nevada</option>
-        <option value="New Hampshire">New Hampshire</option>
-        <option value="New Jersey">New Jersey</option>
-        <option value="New Mexico">New Mexico</option>
-        <option value="New York">New York</option>
-        <option value="North Carolina">North Carolina</option>
-        <option value="North Dakota">North Dakota</option>
-        <option value="Ohio">Ohio</option>
-        <option value="Oklahoma">Oklahoma</option>
-        <option value="Oregon">Oregon</option>
-        <option value="Pennsylvania">Pennsylvania</option>
-        <option value="Rhode Island">Rhode Island</option>
-        <option value="South Carolina">South Carolina</option>
-        <option value="South Dakota">South Dakota</option>
-        <option value="Tennessee">Tennessee</option>
-        <option value="Texas">Texas</option>
-        <option value="Utah">Utah</option>
-        <option value="Vermont">Vermont</option>
-        <option value="Virginia">Virginia</option>
-        <option value="Washington">Washington</option>
-        <option value="West Virginia">West Virginia</option>
-        <option value="Wisconsin">Wisconsin</option>
-        <option value="Wyoming">Wyoming</option>
-        <option value="Outside the United States">Outside the United States</option>
-      `;
-
-      if (emailInput) {
-        var emailWrapper = emailInput.closest('.field') || emailInput;
-        emailWrapper.insertAdjacentElement('afterend', stateSelect);
-      } else {
-        form.prepend(stateSelect);
-      }
-    }
-
-    if (!footerNewsletter.querySelector('.tori-footer-legal')) {
-      var legal = document.createElement('div');
-      legal.className = 'tori-footer-legal';
-      legal.innerHTML = '<em>Emails are sent on behalf of Tori V Studios LLC. You can unsubscribe at any time. By signing up, you agree to receive email updates. See our <a href="/policies/privacy-policy">Privacy Policy</a>.</em>';
-      footerNewsletter.appendChild(legal);
-    }
-  });
-</script>
 <footer class="footer color-{{ section.settings.color_scheme }} gradient section-{{ section.id }}-padding">
   {%- if section.blocks.size > 0 or section.settings.newsletter_enable or section.settings.show_social -%}
     <div class="footer__content-top page-width">
@@ -304,6 +51,201 @@
         -%}
 
               <div class="footer-block--newsletter">
+                <style>
+  .tori-footer-signup {
+    max-width: 390px;
+    color: #fff;
+    font-family: Helvetica, Arial, sans-serif;
+  }
+
+  .tori-footer-signup h2 {
+    margin: 0 0 12px;
+    color: #fff;
+    font-size: 13px;
+    line-height: 1.2;
+    font-weight: 900;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+  }
+
+  .tori-footer-signup p {
+    margin: 0 0 13px;
+    color: rgba(255,255,255,.86);
+    font-size: 11px;
+    line-height: 1.32;
+  }
+
+  .tori-footer-signup form {
+    margin: 0;
+  }
+
+  .tori-footer-input,
+  .tori-footer-select {
+    width: 100%;
+    height: 42px;
+    margin-bottom: 10px;
+    padding: 0 13px;
+    border: 1px solid rgba(255,255,255,.55);
+    background: transparent;
+    color: #fff;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 12px;
+    box-sizing: border-box;
+    border-radius: 0;
+  }
+
+  .tori-footer-input::placeholder {
+    color: rgba(255,255,255,.65);
+    text-transform: uppercase;
+  }
+
+  .tori-footer-select {
+    color: rgba(255,255,255,.75);
+    background: #000;
+  }
+
+  .tori-footer-select option {
+    color: #000;
+    background: #fff;
+  }
+
+  .tori-footer-button {
+    width: 100%;
+    height: 46px;
+    margin-top: 3px;
+    border: 1.5px solid #fff;
+    background: transparent;
+    color: #fff;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 12px;
+    font-weight: 900;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    border-radius: 999px;
+    cursor: pointer;
+  }
+
+  .tori-footer-button:hover {
+    background: #fff;
+    color: #000;
+  }
+
+  .tori-footer-legal {
+    margin-top: 14px;
+    color: rgba(255,255,255,.72);
+    font-size: 10px;
+    line-height: 1.35;
+    text-align: center;
+  }
+
+  .tori-footer-legal em {
+    font-style: italic;
+  }
+
+  .tori-footer-legal a {
+    color: #fff;
+    text-decoration: underline;
+    font-weight: 700;
+  }
+
+  .tori-footer-message {
+    margin-top: 10px;
+    color: #fff;
+    font-size: 11px;
+    font-weight: 700;
+  }
+</style>
+
+<div class="tori-footer-signup">
+  <h2>Sign up for official Tori V updates</h2>
+
+  <p>Get new music, merch drops, live show announcements, and exclusive updates from Tori V.</p>
+
+  {% form 'customer' %}
+    <input type="hidden" name="contact[tags]" value="newsletter, tori v updates">
+
+    <input
+      class="tori-footer-input"
+      type="email"
+      name="contact[email]"
+      placeholder="Your email"
+      required
+    >
+
+    <select class="tori-footer-select" name="contact[note]">
+      <option value="">Select your state</option>
+      <option value="Alabama">Alabama</option>
+      <option value="Alaska">Alaska</option>
+      <option value="Arizona">Arizona</option>
+      <option value="Arkansas">Arkansas</option>
+      <option value="California">California</option>
+      <option value="Colorado">Colorado</option>
+      <option value="Connecticut">Connecticut</option>
+      <option value="Delaware">Delaware</option>
+      <option value="Florida">Florida</option>
+      <option value="Georgia">Georgia</option>
+      <option value="Hawaii">Hawaii</option>
+      <option value="Idaho">Idaho</option>
+      <option value="Illinois">Illinois</option>
+      <option value="Indiana">Indiana</option>
+      <option value="Iowa">Iowa</option>
+      <option value="Kansas">Kansas</option>
+      <option value="Kentucky">Kentucky</option>
+      <option value="Louisiana">Louisiana</option>
+      <option value="Maine">Maine</option>
+      <option value="Maryland">Maryland</option>
+      <option value="Massachusetts">Massachusetts</option>
+      <option value="Michigan">Michigan</option>
+      <option value="Minnesota">Minnesota</option>
+      <option value="Mississippi">Mississippi</option>
+      <option value="Missouri">Missouri</option>
+      <option value="Montana">Montana</option>
+      <option value="Nebraska">Nebraska</option>
+      <option value="Nevada">Nevada</option>
+      <option value="New Hampshire">New Hampshire</option>
+      <option value="New Jersey">New Jersey</option>
+      <option value="New Mexico">New Mexico</option>
+      <option value="New York">New York</option>
+      <option value="North Carolina">North Carolina</option>
+      <option value="North Dakota">North Dakota</option>
+      <option value="Ohio">Ohio</option>
+      <option value="Oklahoma">Oklahoma</option>
+      <option value="Oregon">Oregon</option>
+      <option value="Pennsylvania">Pennsylvania</option>
+      <option value="Rhode Island">Rhode Island</option>
+      <option value="South Carolina">South Carolina</option>
+      <option value="South Dakota">South Dakota</option>
+      <option value="Tennessee">Tennessee</option>
+      <option value="Texas">Texas</option>
+      <option value="Utah">Utah</option>
+      <option value="Vermont">Vermont</option>
+      <option value="Virginia">Virginia</option>
+      <option value="Washington">Washington</option>
+      <option value="West Virginia">West Virginia</option>
+      <option value="Wisconsin">Wisconsin</option>
+      <option value="Wyoming">Wyoming</option>
+      <option value="Outside the United States">Outside the United States</option>
+    </select>
+
+    <button class="tori-footer-button" type="submit">Sign up now</button>
+
+    {% if form.posted_successfully? %}
+      <div class="tori-footer-message">Thank you for signing up.</div>
+    {% endif %}
+
+    {% if form.errors %}
+      <div class="tori-footer-message">Please check your email address and try again.</div>
+    {% endif %}
+  {% endform %}
+
+  <div class="tori-footer-legal">
+    <em>
+      Emails are sent on behalf of Tori V Studios LLC. You can unsubscribe at any time.
+      By signing up, you agree to receive email updates. See our
+      <a href="/policies/privacy-policy">Privacy Policy</a>.
+    </em>
+  </div>
+</div>
 
         {%- if section.settings.show_social -%}
           <ul class="footer__list-social list-unstyled list-social" role="list">
