@@ -3659,43 +3659,17 @@ font-size: 18px !important;
   color: #510F0F;
   text-decoration: underline;
 }
-/* Force privacy policy text to be selectable/clickable */
-html,
-body,
-main,
+/* Let customers highlight/copy Privacy Policy text */
 .shopify-policy__container,
 .shopify-policy__container *,
-.shopify-policy__title,
-.shopify-policy__title *,
 .shopify-policy__body,
 .shopify-policy__body *,
-.rte,
-.rte * {
-  user-select: text !important;
+.shopify-policy__title,
+.shopify-policy__title * {
   -webkit-user-select: text !important;
   -moz-user-select: text !important;
   -ms-user-select: text !important;
+  user-select: text !important;
   pointer-events: auto !important;
-}
-
-/* Make policy content sit above anything blocking it */
-.shopify-policy__container {
-  position: relative !important;
-  z-index: 9999 !important;
-}
-
-.shopify-policy__title,
-.shopify-policy__body {
-  position: relative !important;
-  z-index: 10000 !important;
-}
-
-/* Disable common empty overlay blockers on policy pages */
-.template-policy::before,
-.template-policy::after,
-.shopify-policy__container::before,
-.shopify-policy__container::after,
-main::before,
-main::after {
-  pointer-events: none !important;
+  cursor: text !important;
 }
