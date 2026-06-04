@@ -3737,17 +3737,8 @@ a[href^="mailto:"],
 }/* Make Privacy Policy main title black */
 .shopify-policy__title h1 {
   color: #000000 !important;
-}/* Privacy Policy font */
+}/* Privacy Policy font - all simple */
 .shopify-policy__container,
-.shopify-policy__body,
-.shopify-policy__body p,
-.shopify-policy__body li {
+.shopify-policy__container * {
   font-family: Arial, sans-serif !important;
-}
-
-.shopify-policy__title h1,
-.shopify-policy__body h1,
-.shopify-policy__body h2,
-.shopify-policy__body h3 {
-  font-family: Georgia, serif !important;
 }
