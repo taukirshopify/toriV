@@ -3693,4 +3693,13 @@ main *,
 ::-moz-selection {
   background: Highlight !important;
   color: HighlightText !important;
+}/* Make email links visible on policy/pages */
+a[href^="mailto:"],
+.shopify-policy__body a[href^="mailto:"],
+.rte a[href^="mailto:"],
+.page-width a[href^="mailto:"] {
+  color: #000000 !important;
+  text-decoration: underline !important;
+  opacity: 1 !important;
+  visibility: visible !important;
 }
