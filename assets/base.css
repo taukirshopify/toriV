@@ -3351,11 +3351,6 @@ stroke-linejoin="round"><path d="M4 6H6.2" /><path d="M6.2 6L8.5 14H18.5L20 8H9.
   color: white !important;
 }
 
-.header__inline-menu li a:hover {
-  background: #d40000 !important;
-  color: white !important;
-}
-
 .header__inline-menu .list-menu__item {
   font-size: 16px !important;
   letter-spacing: .08em !important;
@@ -3845,39 +3840,41 @@ text-decoration:underline!important;
 text-underline-offset:4px!important;
 text-decoration-thickness:1px!important;
 }
-/* ORDER SUPPORT PAGE - ALIGN WITH HELP PAGE TEXT COLUMN */
-body:has(a[href="/pages/help-center"]) .shopify-section:has(.tv-order-support-page),
-body:has(.tv-order-support-page) {
-  --tv-help-left-offset: 52.5%;
-}
 
-.tv-order-support-page {
-  width: 100%;
-  max-width: 1540px;
-  margin: 0 auto;
-  padding: 0 36px 80px;
-  box-sizing: border-box;
-}
-
-.tv-order-support-inner {
-  width: 100%;
-  max-width: 680px;
-  margin-left: 52.5%;
-  transform: translateX(-1px);
-}
-
-.tv-order-support-inner h1 {
-  margin-top: 0;
-}
-
-@media screen and (max-width: 989px) {
-  .tv-order-support-page {
-    padding: 32px 22px 60px;
+/* ORDER SUPPORT — align all content's LEFT edge with the Help Center text column,
+   while keeping a normal content width.
+   The page sits inside the narrow .page-width--narrow container (~726px, centered),
+   so to reach the Help Center's text position we use the Help Center's OWN full-bleed
+   technique (width:100vw + margin:calc(50% - 50vw)) to break out to the full viewport,
+   then use padding-left to start the content exactly at the Help Center column's left edge:
+     3-col (>=1101px): left = 42vw + 14.24px   (55px pad + 1.05fr video col + 34px gap)
+     2-col (751-1100px): left = 50vw + 17px     (Help Center switches to 1fr 1fr here)
+   Selector .rte .tv-faq-page (higher specificity) beats the page's own inline <style>
+   which sets left:-50px!important etc. Per-element max-widths in the page keep the width. */
+@media screen and (min-width: 1101px) {
+  .rte .tv-faq-page {
+    box-sizing: border-box !important;
+    width: 100vw !important;
+    max-width: 100vw !important;
+    margin-left: calc(50% - 50vw) !important;
+    margin-right: calc(50% - 50vw) !important;
+    left: 0 !important;
+    transform: none !important;
+    padding-left: calc(42vw + 14.24px) !important;
+    padding-right: 55px !important;
   }
+}
 
-  .tv-order-support-inner {
-    max-width: 100%;
-    margin-left: 0;
-    transform: none;
+@media screen and (min-width: 751px) and (max-width: 1100px) {
+  .rte .tv-faq-page {
+    box-sizing: border-box !important;
+    width: 100vw !important;
+    max-width: 100vw !important;
+    margin-left: calc(50% - 50vw) !important;
+    margin-right: calc(50% - 50vw) !important;
+    left: 0 !important;
+    transform: none !important;
+    padding-left: calc(50vw + 17px) !important;
+    padding-right: 55px !important;
   }
 }

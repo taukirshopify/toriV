@@ -370,7 +370,7 @@ document.addEventListener('click', function () {
 
 <script>
   document.addEventListener("DOMContentLoaded", function () {
-    var banner = document.querySelector("#Banner-template--16775790199037__image_banner_EYAaJY");
+    var banner = document.querySelector('[id^="Banner-"][id$="__image_banner_EYAaJY"]');
     if (!banner) return;
 
     if (document.querySelector("#big-bad-wolf-listen-now")) return;
