@@ -3878,3 +3878,35 @@ text-decoration-thickness:1px!important;
     padding-right: 55px !important;
   }
 }
+
+/* PRODUCT PAGE — the theme's base text color is white (255,255,255) on a white
+   background, so the product info (title/price/description/options) renders
+   invisible. Other areas have black overrides; the product page didn't. Force the
+   product info text dark. Buttons are left alone (they use colored backgrounds
+   with light labels, e.g. the red Add to cart). */
+.product__info-container .product__title h1,
+.product__info-container .product__title h2,
+.product__info-container .product__title .h1,
+.product__info-container .product__title a,
+.product__info-container .product__text,
+.product__info-container .price,
+.product__info-container .price__container,
+.product__info-container .price-item,
+.product__info-container .product__tax,
+.product__info-container .product__tax a,
+.product__info-container .product__description,
+.product__info-container .product__accordion summary,
+.product__info-container .product__accordion .accordion__title,
+.product__info-container .rte,
+.product__info-container .rte p,
+.product__info-container .rte li,
+.product__info-container .rte a,
+.product__info-container .rte span,
+.product__info-container .rte strong,
+.product__info-container fieldset legend,
+.product__info-container .form__label,
+.product__info-container label,
+.product__info-container .quantity__label {
+  color: #000 !important;
+  -webkit-text-fill-color: #000 !important;
+}
