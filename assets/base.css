@@ -3910,3 +3910,29 @@ text-decoration-thickness:1px!important;
   color: #000 !important;
   -webkit-text-fill-color: #000 !important;
 }
+
+/* The "Add to cart" button is a secondary (outline) style; with the white base
+   colors its text + border are white-on-white = invisible. Make it solid black
+   (red on hover) so it's clearly visible and customers can add to cart. */
+.product__info-container .product-form__submit.button {
+  background: #000 !important;
+  background-color: #000 !important;
+  color: #fff !important;
+  -webkit-text-fill-color: #fff !important;
+  border: 1px solid #000 !important;
+  box-shadow: none !important;
+}
+.product__info-container .product-form__submit.button > span,
+.product__info-container .product-form__submit.button .loading-overlay__spinner {
+  color: #fff !important;
+  -webkit-text-fill-color: #fff !important;
+}
+.product__info-container .product-form__submit.button::before { display: none !important; }
+.product__info-container .product-form__submit.button::after { box-shadow: none !important; border: 0 !important; }
+.product__info-container .product-form__submit.button:hover {
+  background: #c40000 !important;
+  background-color: #c40000 !important;
+  border-color: #c40000 !important;
+  color: #fff !important;
+  -webkit-text-fill-color: #fff !important;
+}
